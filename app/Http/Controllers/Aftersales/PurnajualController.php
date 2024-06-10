@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Aftersales;
 use App\Http\Controllers\Controller;
 use App\Models\Aftersales\Purnajual;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
 
@@ -17,6 +18,7 @@ class PurnajualController extends Controller
 
     public function add_action(Request $request){
         $data = $request->except(['_token']);
+        $data['updated_by'] = Auth::user()->username;
         Purnajual::where('id',1)->update($data);
         return redirect()->back()->with('success','Data berhasil ditambahkan');
     }

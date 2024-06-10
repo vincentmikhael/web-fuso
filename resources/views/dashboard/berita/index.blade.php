@@ -20,6 +20,8 @@
                             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Kategori</th>
                           <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Judul</th>
                           <th class="text-secondary opacity-7"></th>
+                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Created by</th>
+                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Updated by</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -38,6 +40,8 @@
                             <a href="/cms/edit/{{$item->id}}" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit brosur"> Edit </a>
                             <a href="/cms/delete/{{$item->id}}" class="text-danger font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Delete brosur"> Hapus </a>
                           </td>
+                          <td class="mb-0 text-sm h6">{{$item->created_by}}</td>
+                          <td class="mb-0 text-sm h6">{{$item->updated_by}}</td>
                         </tr>
                         @endforeach
                         

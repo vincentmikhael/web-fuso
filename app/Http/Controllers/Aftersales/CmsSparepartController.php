@@ -7,6 +7,7 @@ use App\Models\Aftersales\CmsSparepart;
 use App\Models\Aftersales\Sparepart;
 use App\Models\Aftersales\SparepartKategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
 class CmsSparepartController extends Controller
@@ -19,6 +20,7 @@ class CmsSparepartController extends Controller
     public function add_action(Request $request){
         // $data = $request->except(['_token','gambar']);
         $data = $request->except(['_token']);
+        $data['updated_by'] = Auth::user()->username;
         // if($request->gambar){
         //     $sparepart = CmsSparepart::first();
         //     File::delete(public_path($sparepart->background));

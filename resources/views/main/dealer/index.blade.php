@@ -45,6 +45,29 @@
         <div id="map" style="height:650px;"></div>
     </section>
     
+    <div class="container my-5">
+        <div class="row">
+        @forelse ($cabang as $item)
+            <div class="col-md-12">
+                <div class="d-md-flex justify-content-between align-items-center">
+                    <div>
+                        <h4>{{$item->nama}}</h4>
+                        <p>{{$item->alamat}}</p>
+                    </div>
+                    <div>
+                        <a class="btn btn-outline-secondary" href="https://wa.me/{{$item->whatsapp}}"> <i class="fa fa-whatsapp"></i> {{$item->whatsapp}}</a>
+                        <a class="btn btn-outline-secondary mx-1 my-2" href="https://wa.me/{{$item->telepon}}"> <i class="fa fa-phone"></i> {{$item->telepon}}</a>
+                        <a class="btn btn-outline-secondary" href="https://maps.google.com/?q={{$item->lon}},{{$item->lat}}" target="_BLANK"> <i class="fas fa-map-marker-alt"></i> Petunjuk Maps</a>
+                    </div>
+                </div>
+                <hr>
+                    
+            </div>
+        @empty
+            
+        @endforelse
+    </div>
+    </div>
     
     </div>
 @endsection

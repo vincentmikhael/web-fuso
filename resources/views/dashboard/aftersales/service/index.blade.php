@@ -5,7 +5,10 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-header">CMS Service</div>
+            <div class="card-header d-flex justify-content-between">
+                <div>CMS Service</div>
+                <div>Last updated by {{$service->updated_by}}</div>
+            </div>
             <div class="card-body">
                 <form action="" method="POST" enctype="multipart/form-data">
                     @csrf

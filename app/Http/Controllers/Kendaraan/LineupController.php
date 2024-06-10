@@ -10,6 +10,7 @@ use App\Models\Kendaraan\LineupSlider;
 use App\Models\Kendaraan\LineupSpesifikasi;
 use App\Models\Kendaraan\LineupWarna;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 
@@ -49,6 +50,7 @@ class LineupController extends Controller
     public function add_action(Request $request,$id_kendaraan){
         $insert = $request->except(['_token','thumbnail','gambar','banner','item','spesifikasi']);
         $insert['kendaraan_id'] = $id_kendaraan;
+        $insert['created_by'] = Auth::user()->username;
 
         $brosur = '1' . time() . $request->brosur->getClientOriginalName();
         $request->brosur->move(public_path('brosur/lineup_kendaraan/'), $brosur);
@@ -96,6 +98,7 @@ class LineupController extends Controller
     public function update(Request $request,$id_kendaraan,$id_lineup){
         $insert = $request->except(['_token','thumbnail','gambar','banner','item','spesifikasi']);
         $insert['kendaraan_id'] = $id_kendaraan;
+        $insert['updated_by'] = Auth::user()->username;
         $lineup = Lineup::find($id_lineup);
         if($request->brosur){
             File::delete(public_path($lineup->brosur));

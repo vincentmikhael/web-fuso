@@ -532,6 +532,58 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         </div>
     </div>
 </div>
+
+<div class="header__float">
+    <a href="https://wa.me/{{getSetting()->whatsapp}}" target="_blank" class="btn btn__primary btn__float" data-wpel-link="external" rel="nofollow noopener noreferrer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1132_2366)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12C2 13.89 2.525 15.66 3.438 17.168L2.546 20.2C2.49478 20.3741 2.49141 20.5587 2.53624 20.7346C2.58107 20.9104 2.67245 21.0709 2.80076 21.1992C2.92907 21.3276 3.08958 21.4189 3.26542 21.4638C3.44125 21.5086 3.62592 21.5052 3.8 21.454L6.832 20.562C8.39068 21.5051 10.1782 22.0025 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM9.738 14.263C11.761 16.285 13.692 16.552 14.374 16.577C15.411 16.615 16.421 15.823 16.814 14.904C16.8636 14.7897 16.8816 14.6641 16.8661 14.5405C16.8507 14.4168 16.8023 14.2996 16.726 14.201C16.178 13.501 15.437 12.998 14.713 12.498C14.5618 12.3935 14.3761 12.3516 14.1947 12.381C14.0133 12.4105 13.8503 12.509 13.74 12.656L13.14 13.571C13.1085 13.6202 13.0593 13.6555 13.0026 13.6696C12.9459 13.6837 12.8859 13.6756 12.835 13.647C12.428 13.414 11.835 13.018 11.409 12.592C10.983 12.166 10.611 11.6 10.402 11.219C10.3761 11.1706 10.3686 11.1144 10.3809 11.0609C10.3932 11.0074 10.4245 10.9602 10.469 10.928L11.393 10.242C11.5249 10.1273 11.61 9.9682 11.6321 9.79486C11.6542 9.62153 11.6118 9.44611 11.513 9.302C11.065 8.646 10.543 7.812 9.786 7.259C9.68831 7.1882 9.57386 7.14406 9.45393 7.13091C9.334 7.11776 9.21271 7.13606 9.102 7.184C8.182 7.578 7.386 8.588 7.424 9.627C7.449 10.309 7.716 12.24 9.738 14.263Z" fill="white"></path>
+</g>
+<defs>
+<clipPath id="clip0_1132_2366">
+<rect width="24" height="24" fill="white"></rect>
+</clipPath>
+</defs>
+</svg>
+
+        <span class="only__desktop">Hubungi Kami</span>
+    </a>
+</div>
+
+<div class="header__mobile only__mobile">
+    <a href="/" class="btn btn__mobile active" data-wpel-link="internal">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_510_378)">
+          <path d="M12 3L3 10.4985V21H8.9985V15H15V21H20.9985V10.4985L12 3Z" fill="#7E7E7E"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_510_378">
+            <rect width="24" height="24" fill="white"></rect>
+          </clipPath>
+        </defs>
+      </svg> Beranda </a>
+    <a href="/#produk" class="btn btn__mobile ">
+      <svg width="28" height="19" viewBox="0 0 28 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.05428 0.89502C1.83344 0.89502 0.84375 1.88471 0.84375 3.10555V16.9234H3.52649C3.56107 15.1017 5.04864 13.6356 6.87865 13.6356C8.70866 13.6356 10.1962 15.1017 10.2308 16.9234H19.5436V3.10555C19.5436 1.88471 18.5539 0.89502 17.3331 0.89502H3.05428Z" fill="#7E7E7E"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3235 16.9883L28.0002 16.9883V8.34663C28.0002 8.00555 27.8428 7.68358 27.5735 7.47419L24.372 4.98411C23.79 4.53142 23.0737 4.28564 22.3363 4.28564H18.9478V16.9883L19.618 16.9883C19.618 15.1367 21.1191 13.6356 22.9708 13.6356C24.8225 13.6356 26.3235 15.1367 26.3235 16.9883ZM20.7749 8.70373V6.23782H22.7271L25.8095 8.70373H20.7749Z" fill="#7E7E7E"></path>
+        <circle cx="6.87714" cy="16.9882" r="2.01166" fill="#7E7E7E"></circle>
+        <circle cx="22.9716" cy="16.9882" r="2.01166" fill="#7E7E7E"></circle>
+      </svg> Produk </a>
+    <a href="/dealer" class="btn btn__mobile ">
+      <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.18182 5.97015C6.8961 5.97015 5.84416 7.04478 5.84416 8.35821C5.84416 9.67164 6.8961 10.7463 8.18182 10.7463C9.46753 10.7463 10.5195 9.67164 10.5195 8.35821C10.5195 7.04478 9.46753 5.97015 8.18182 5.97015ZM8.18182 0C12.0039 0 16.3636 2.93731 16.3636 8.53731C16.3636 12.0955 13.874 15.8448 8.8948 19.7493C8.47402 20.0836 7.88961 20.0836 7.46883 19.7493C2.48961 15.8328 0 12.0955 0 8.53731C0 2.93731 4.35974 0 8.18182 0Z" fill="#7E7E7E"></path>
+      </svg> Dealer </a>
+    {{-- <a href="/contact-us" class="btn btn__mobile ">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.9782 14.7675L15.5182 13.2275C15.7256 13.0227 15.9881 12.8825 16.2736 12.8239C16.5592 12.7653 16.8557 12.7909 17.127 12.8975L19.0038 13.6469C19.278 13.7582 19.5131 13.9482 19.6795 14.1928C19.8459 14.4375 19.9361 14.726 19.9388 15.0219V18.4594C19.9372 18.6607 19.8949 18.8596 19.8145 19.0441C19.734 19.2286 19.617 19.3949 19.4705 19.533C19.3241 19.6711 19.1512 19.7781 18.9623 19.8476C18.7734 19.9172 18.5724 19.9477 18.3713 19.9375C5.21947 19.1194 2.56572 7.9819 2.06384 3.7194C2.04055 3.51008 2.06183 3.2982 2.1263 3.0977C2.19077 2.8972 2.29696 2.71262 2.43789 2.55611C2.57882 2.3996 2.75129 2.27469 2.94395 2.18962C3.13662 2.10455 3.34511 2.06124 3.55572 2.06253H6.87634C7.17266 2.06341 7.46194 2.15291 7.70698 2.31954C7.95201 2.48616 8.1416 2.72228 8.25134 2.99753L9.00072 4.8744C9.11089 5.14464 9.139 5.44134 9.08153 5.72746C9.02406 6.01358 8.88357 6.27642 8.67759 6.48315L7.13759 8.02315C7.13759 8.02315 8.02447 14.025 13.9782 14.7675Z" fill="#7E7E7E"></path>
+      </svg> Hubungi </a> --}}
+    <a onclick="klikLainnya()" class="btn btn__mobile" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 3C6 4.65685 4.65685 6 3 6C1.34315 6 0 4.65685 0 3C0 1.34315 1.34315 0 3 0C4.65685 0 6 1.34315 6 3ZM16 3C16 4.65685 14.6569 6 13 6C11.3431 6 10 4.65685 10 3C10 1.34315 11.3431 0 13 0C14.6569 0 16 1.34315 16 3ZM23 6C24.6569 6 26 4.65685 26 3C26 1.34315 24.6569 0 23 0C21.3431 0 20 1.34315 20 3C20 4.65685 21.3431 6 23 6Z" fill="#7E7E7E"></path>
+      </svg> Lainnya </a>
+  </div>
+
+
 <div class="page-footer" id="wrapper-footer">
 	<div class="main-copyright">
 		<div class="container">
@@ -539,11 +591,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		</div>
 	</div>
 </div>
-<div class="fixed-bottom m-2">
-    <a href="https://wa.me/{{getSetting()->whatsapp}}">
-        <i style="color: green" class="fab fa-whatsapp-square fa-4x"></i>
-    </a>
-</div>
+
 
 <script type='text/javascript' src='{{asset("wp-content/themes/miratfuso/js/fancybox.min7394.js?ver=0.9.4.1666219636")}}' id='understrap-fancybox-scripts-js'></script>
 <script type='text/javascript' src='{{asset("wp-content/themes/miratfuso/js/swiper-bundle.mind6bd.js?ver=0.9.4.1668817624")}}' id='swiper-scripts-js'></script>
@@ -583,6 +631,12 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         </div>
     </div>
 </div> --}}
+
+<script>
+    function klikLainnya(){
+        $('.navbar-toggler').click()
+    }
+</script>
 </body>
 </html>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
@@ -37,6 +38,7 @@ class SejarahController extends Controller
             DB::table('sejarah_perusahaan_timeline')->insert($request->item);
         }
         $update = $request->except(['item','_token']);
+        $update['updated_by'] = Auth::user()->username;
         $sejarah = DB::table('sejarah_perusahaan')->where('id',1)->first();
 
         if($request->thumbnail){

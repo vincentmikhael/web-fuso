@@ -7,6 +7,7 @@ use App\Http\Controllers\Aftersales\PurnajualController;
 use App\Http\Controllers\Aftersales\ServiceController;
 use App\Http\Controllers\Aftersales\SparepartController;
 use App\Http\Controllers\Aftersales\SparepartKategoriController;
+use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\Kendaraan\ExteriorController;
@@ -90,23 +91,33 @@ Route::get('/cabang/delete/{id}',[CabangController::class,'delete']);
 
 Route::get('/service',[ServiceController::class,'index']);
 Route::post('/service',[ServiceController::class,'add_action']);
-Route::get('/layanan/service',[ServiceController::class,'show']);
+
 
 Route::get('/cms_sparepart',[CmsSparepartController::class,'index']);
 Route::post('/cms_sparepart',[CmsSparepartController::class,'add_action']);
-Route::get('/layanan/sparepart',[CmsSparepartController::class,'show']);
+
 Route::get('/aftersales/sparepart/{id}',[CmsSparepartController::class,'detail']);
 
 
 Route::get('/purnajual',[PurnajualController::class,'index']);
 Route::post('/purnajual',[PurnajualController::class,'add_action']);
-Route::get('/layanan/purnajual',[PurnajualController::class,'show']);
+
 
 Route::get('/setting',[SettingController::class,'index']);
 Route::post('/setting',[SettingController::class,'add_action']);
+
+Route::get('/users',[AuthController::class,'index']);
+Route::get('/users/add',[AuthController::class,'add']);
+Route::post('/users/add',[AuthController::class,'add_action']);
+Route::get('/users/edit/{id}',[AuthController::class,'edit']);
+Route::post('/users/edit/{id}',[AuthController::class,'update']);
+Route::get('/users/delete/{id}',[AuthController::class,'delete']);
 });
 
 
+Route::get('/layanan/service',[ServiceController::class,'show']);
+Route::get('/layanan/purnajual',[PurnajualController::class,'show']);
+Route::get('/layanan/sparepart',[CmsSparepartController::class,'show']);
 
 Route::get('/list-karir',[KarirController::class,'show']);
 Route::get('/karir/pelamar/{id}',[KarirController::class,'pelamar']);
@@ -184,3 +195,6 @@ Route::get('/sparepart/delete/{id}',[SparepartController::class,'delete']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/register',function(){
+
+});

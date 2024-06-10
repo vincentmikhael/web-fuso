@@ -5,7 +5,10 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-header">Manajemen purnajual</div>
+            <div class="card-header d-flex justify-content-between">
+                <div>Manajemen purnajual</div>
+                <small>Last updated by {{$purnajual->updated_by}}</small>
+            </div>
             <div class="card-body">
                 <form action="" method="POST" enctype="multipart/form-data">
                     @csrf

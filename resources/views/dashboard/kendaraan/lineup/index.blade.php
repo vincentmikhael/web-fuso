@@ -21,6 +21,8 @@
                           <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Kategori</th>
                           <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Tipe</th>
                           <th class="text-secondary opacity-7"></th>
+                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Created by</th>
+                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Updated by</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -45,6 +47,8 @@
                             <a href="/kendaraan/{{$id_kendaraan}}/lineup/edit/{{$item->id}}" class=" btn btn-success font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit kendaraan"> Edit </a>
                             <a href="/kendaraan/{{$id_kendaraan}}/lineup/delete/{{$item->id}}" class="btn btn-danger font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Delete kendaraan"> Hapus </a>
                           </td>
+                          <td class="mb-0 text-sm h6">{{$item->created_by}}</td>
+                          <td class="mb-0 text-sm h6">{{$item->updated_by}}</td>
                         </tr>
                         @endforeach
                         

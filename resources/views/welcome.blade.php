@@ -57,7 +57,7 @@
 	</div>
 </section>
 
-<section class="product-type-home height-full">
+<section id="produk" class="product-type-home height-full">
 	<div class="row no-gutters h-100">
 		<div class="col-lg-4 col-type">
 			<div class="type-box bg-1 text-center">
