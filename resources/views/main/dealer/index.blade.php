@@ -55,9 +55,9 @@
                         <p>{{$item->alamat}}</p>
                     </div>
                     <div>
-                        <a class="btn btn-outline-secondary" href="https://wa.me/{{$item->whatsapp}}"> <i class="fa fa-whatsapp"></i> {{$item->whatsapp}}</a>
-                        <a class="btn btn-outline-secondary mx-1 my-2" href="https://wa.me/{{$item->telepon}}"> <i class="fa fa-phone"></i> {{$item->telepon}}</a>
-                        <a class="btn btn-outline-secondary" href="https://maps.google.com/?q={{$item->lon}},{{$item->lat}}" target="_BLANK"> <i class="fas fa-map-marker-alt"></i> Petunjuk Maps</a>
+                        <a class="btn btn-outline" style="border-color: #FE5E00 !important; color:#FE5E00 !important; font-weight: bold;" href="https://wa.me/{{$item->whatsapp}}"> <i style="font-weight: bold;" class="fa fa-whatsapp"></i> {{$item->whatsapp}}</a>
+                        <a style="border-color: #FE5E00 !important; color:#FE5E00 !important; font-weight: bold;" class="btn btn-outline mx-1 my-2" href="https://wa.me/{{$item->telepon}}"> <i style="font-weight: bold;" class="fa fa-phone"></i> {{$item->telepon}}</a>
+                        <a style="border-color: #FE5E00 !important; color:#FE5E00 !important; font-weight: bold;" class="btn btn-outline" href="https://maps.google.com/?q={{$item->lon}},{{$item->lat}}" target="_BLANK"> <i style="font-weight: bold;" class="fas fa-map-marker-alt"></i> Petunjuk Maps</a>
                     </div>
                 </div>
                 <hr>
