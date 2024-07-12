@@ -59,7 +59,7 @@ class KarirController extends Controller
             $karir->where('pekerjaan','like','%'.$request->get('pekerjaan').'%');
         }
         
-        $karir = $karir->paginate(2);
+        $karir = $karir->paginate(10);
         return view('main/karir/index',compact('karir','perusahaan'));
     }
 }

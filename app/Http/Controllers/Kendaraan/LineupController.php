@@ -63,6 +63,14 @@ class LineupController extends Controller
         $banner = '2' . time() . $request->banner->getClientOriginalName();
         $request->banner->move(public_path('images/lineup_kendaraan/'), $banner);
         $insert['banner'] = "images/lineup_kendaraan/" . $banner;
+        
+        if($id_kendaraan == 1){
+            $insert['kategori'] = 'Light Duty';
+        }else if($id_kendaraan == 2){
+            $insert['kategori'] = 'Medium Duty';
+        }else if($id_kendaraan == 3){
+            $insert['kategori'] = 'Tractor Duty';
+        }
 
         $insert['slug'] = Str::slug($request->nama,'-');
         $id = Lineup::insertGetId($insert);

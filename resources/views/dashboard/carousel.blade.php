@@ -17,35 +17,34 @@
                   @forelse ($banner as $idx => $item)
                   <div class="row">
                     <input type="hidden" name="item[{{$idx}}][id]" value="{{$item->id}}" >
-            
-                    <div class="col-md-6">
-                      <label for="">Link button</label>
-                      <input type="text" required value="{{$item->link}}"  name="item[{{$idx}}][link]" class="form-control">
-                    </div>
+        
                     <div class="col-md-6">
                       <label for="">Background banner</label>
-                      
+                        <input type="file"  name="item[{{$idx}}][background]" class="form-control">              
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="">Background banner untuk mobile</label>
                       <div class="d-flex gap-2 align-items-center justify-content-center">
-                        <input type="file"  name="item[{{$idx}}][background]" class="form-control">
+                        <input type="file"  name="item[{{$idx}}][background_mobile]" class="form-control">
     
                           <a href="/banner/{{$item->id}}" type="submit" form="deletebanner{{$idx}}" class="btn btn-danger my-0">Delete</a>
         
                       </div>
-                  
                     </div>
+                    
                     <hr>
                   </div>
                   @empty
                   <div class="row">
                     <input type="hidden" name="item[0][id]" value="">
-             
-                    <div class="col-md-6">
-                      <label for="">Link button</label>
-                      <input type="text" required name="item[0][link]" class="form-control">
-                    </div>
                     <div class="col-md-6">
                       <label for="">Background banner</label>
                       <input type="file"  name="item[0][background]" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="">Background banner untuk mobile</label>
+                      <input type="file"  name="item[0][background_mobile]" class="form-control">
                     </div>
                     <hr>
                   </div>
@@ -113,17 +112,20 @@
                   <input type="hidden" name="item[${i}][id]" value="">
                   <div class="row">
                
-                  <div class="col-md-6">
-                      <label for="">Link button</label>
-                      <input type="text" required name="item[${i}][link]" class="form-control">
-                    </div>
-                  <div class="col-md-6">
+              <div class="col-md-6">
                     <label for="">Background banner</label>
                     <div class="d-flex gap-2 align-items-center justify-content-center">
                       <input type="file" name="item[${i}][background]" class="form-control">
                     <button type="button" onclick="deleteRow(this)" class="btn btn-danger my-0">X</button>
                       </div>
-                    
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="">Background banner untuk mobile</label>
+                    <div class="d-flex gap-2 align-items-center justify-content-center">
+                      <input type="file" name="item[${i}][background_mobile]" class="form-control">
+                    <button type="button" onclick="deleteRow(this)" class="btn btn-danger my-0">X</button>
+                      </div>
                   </div>
           
                   <hr></div>

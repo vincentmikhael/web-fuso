@@ -33,10 +33,16 @@ class CmsSparepartController extends Controller
         return redirect()->back()->with('success','Data berhasil ditambahkan');
     }
 
-    public function show(){
+    public function show(Request $request){
         $sparepart = CmsSparepart::first();
         $sparepart_kategori = SparepartKategori::all();
-        return view('main/aftersales/sparepart',compact('sparepart','sparepart_kategori'));
+        if($request->get('kategori_id')){
+            $data = Sparepart::where('kategori_id',$request->get('kategori_id'))->get();
+        }else{
+            $data = Sparepart::all();
+        }
+        
+        return view('main/aftersales/sparepart',compact('sparepart','sparepart_kategori','data'));
     }
 
     public function detail($id){

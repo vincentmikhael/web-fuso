@@ -12,12 +12,12 @@
             <div class="card-body">
                 <form action="" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <label for="">Gambar thumbnail</label>
-                    <input type="file" name="thumbnail" class="form-control">
+                    {{-- <label for="">Gambar thumbnail</label>
+                    <input type="file" name="thumbnail" class="form-control"> --}}
                     <label for="">Deskripsi</label>
-                    <textarea name="content" id="content" rows="10" cols="80">{{$sejarah->content}}</textarea>
+                    <textarea name="content" id="content" style="height: 300px;">{{$sejarah->content}}</textarea>
 
-                    <div onclick="addRow()" class="btn btn-primary mt-3">Add row</div>
+                    {{-- <div onclick="addRow()" class="btn btn-primary mt-3">Add row</div>
                     <div id="row_timeline">
                         @forelse ($sejarah_timeline as $idx => $item)
                         <div class="row">
@@ -47,7 +47,7 @@
                         </div>
                         @endforelse
                         
-                    </div>
+                    </div> --}}
                     <button class="btn btn-primary mt-4">Submit</button>
                 </form>
             </div>
@@ -87,6 +87,7 @@
 CKEDITOR.replace('content', {
         filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
         filebrowserUploadMethod: 'form',
+        height: 400,
         on: {
             instanceReady: function (evt) {
                 var editor = evt.editor;

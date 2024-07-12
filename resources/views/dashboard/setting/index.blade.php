@@ -29,19 +29,41 @@
                         <input type="text" required value="{{$setting->meta_sitename}}" name="meta_sitename" class="form-control">
                     </div>
                     <div class="col-md-6">
-                        <label for="">Icon Website</label>
+                        <label for="">Icon Website 1</label>
                         <input type="file" name="icon" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="">Icon Website 2</label>
+                        <input type="file" name="icon2" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="">Icon Footer</label>
+                        <input type="file" name="icon3" class="form-control">
                     </div>
                     <div class="col-md-6">
                         <label for="">Favicon tab website</label>
                         <input type="file" name="favicon" class="form-control">
                     </div>
                     <div class="col-md-6">
-                        <label for="">Nomor whatsapp (untuk kontak hubungi kami)</label> <br>
-                        <small>*harus diawali dengan 62</small>
+                        <label for="">Nomor whatsapp (untuk kontak hubungi kami)</label><small>*wajib diawali dengan 62</small>
                         <input type="number" required value="{{$setting->whatsapp}}" placeholder="62xxxx" name="whatsapp" class="form-control">
                     </div>
-                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                        <label for="">Nomor telepon</label> <br>
+                        <input type="text" required value="{{$setting->no_telp}}" name="no_telp" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="">Hari operasional</label> <br>
+                        <input type="text" required value="{{$setting->hari_operasional}}" name="hari_operasional" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="">Jam Operasional</label> <br>
+                        <input type="text" required value="{{$setting->jam_operasional}}" name="jam_operasional" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="">Email</label> <br>
+                        <input type="text" required value="{{$setting->email}}" name="email" class="form-control">
+                    </div>
                     {{-- <div class="col-md-6">
                         <label for="">Link linkedin</label>
                         <input type="text" required value="{{$setting->linkedin}}" name="linkedin" class="form-control">
@@ -58,10 +80,10 @@
                         <label for="">Link facebook</label>
                         <input type="text" required value="{{$setting->facebook}}" name="facebook" class="form-control">
                     </div>
-                    <div class="col-md-6">
+                    {{-- <div class="col-md-6">
                         <label for="">Link twitter</label>
                         <input type="text" required value="{{$setting->twitter}}" name="twitter" class="form-control">
-                    </div>
+                    </div> --}}
                     <div class="col-md-6"></div>
                     {{-- <div class="col-md-6">
                         <label for="">Alamat kantor pusat</label>

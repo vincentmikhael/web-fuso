@@ -18,7 +18,10 @@
                       <thead>
                         <tr>
                           <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama</th>
-                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Harga</th>
+                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Kategori</th>
+                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Material</th>
+                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Material grup</th>
+                          <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Deskripsi</th>
                           <th class="text-secondary opacity-7"></th>
                         </tr>
                       </thead>
@@ -34,8 +37,20 @@
                               </div>
                             </div>
                           </td>
+                          
                           <td>
                             <h6 class="mb-0 text-sm">{{$item->harga}}</h6>
+                          </td><td>
+                            <h6 class="mb-0 text-sm">{{$item->kategori_id}}</h6>
+                          </td>
+                          <td>
+                            <h6 class="mb-0 text-sm">{{$item->material}}</h6>
+                          </td>
+                          <td>
+                            <h6 class="mb-0 text-sm">{{$item->material_grup}}</h6>
+                          </td>
+                          <td>
+                            <h6 class="mb-0 text-sm">{{$item->deskripsi}}</h6>
                           </td>
          
                           <td class="align-middle">

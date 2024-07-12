@@ -30,18 +30,18 @@ class SparepartController extends Controller
 
         $id = Sparepart::insertGetId($data);
 
-        $data = [];
-        foreach($request->item as $item){
-            if($item['nama'] && $item['link']){
-                $data[] = [
-                    "nama" => $item['nama'],
-                    "link" => $item['link'],
-                    "sparepart_id" => $id
-                ];
-            }
-        }
+        // $data = [];
+        // foreach($request->item as $item){
+        //     if($item['nama'] && $item['link']){
+        //         $data[] = [
+        //             "nama" => $item['nama'],
+        //             "link" => $item['link'],
+        //             "sparepart_id" => $id
+        //         ];
+        //     }
+        // }
 
-        SparepartLink::insert($data);
+        // SparepartLink::insert($data);
         return redirect()->to('/sparepart')->with('success','Data berhasil ditambahkan');
    }
 
@@ -65,18 +65,18 @@ class SparepartController extends Controller
 
         Sparepart::where('id',$id)->update($data);
         
-        $data = [];
-        foreach($request->item as $item){
-            if($item['nama'] && $item['link']){
-                $data[] = [
-                    "nama" => $item['nama'],
-                    "link" => $item['link'],
-                    "sparepart_id" => $id
-                ];
-            }
-        }
-        SparepartLink::where('sparepart_id',$id)->delete();
-        SparepartLink::insert($data);
+        // $data = [];
+        // foreach($request->item as $item){
+        //     if($item['nama'] && $item['link']){
+        //         $data[] = [
+        //             "nama" => $item['nama'],
+        //             "link" => $item['link'],
+        //             "sparepart_id" => $id
+        //         ];
+        //     }
+        // }
+        // SparepartLink::where('sparepart_id',$id)->delete();
+        // SparepartLink::insert($data);
 
         return redirect()->to('/sparepart')->with('success','Data di update');
    }

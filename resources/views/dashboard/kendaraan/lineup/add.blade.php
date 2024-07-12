@@ -39,12 +39,12 @@
                         <div class="col-md-6">
                             <input type="hidden" name="kendaraan_id">
                             <label for="">Jumlah ban</label>
-                            <input type="text" required class="form-control" name="ban">
+                            <input type="hidden" value="0"  class="form-control" name="ban">
                         </div>
                         <div class="col-md-6">
                             <input type="hidden" name="kendaraan_id">
                             <label for="">PS</label>
-                            <input type="text" required class="form-control" name="ps">
+                            <input type="hidden" value="0" required class="form-control" name="ps">
                         </div>
 
                         <div class="col-md-4">

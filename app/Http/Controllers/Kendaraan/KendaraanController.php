@@ -38,10 +38,6 @@ class KendaraanController extends Controller
         $request->gambar->move(public_path('images/gambar_kendaraan/'), $gambar);
         $data['gambar'] = "images/gambar_kendaraan/" . $gambar;
 
-        $gambar2 = '2' . time() . $request->gambar2->getClientOriginalName();
-        $request->gambar2->move(public_path('images/gambar_kendaraan/'), $gambar2);
-        $data['gambar2'] = "images/gambar_kendaraan/" . $gambar2;
-
         $foto_fitur_lengkap = '3' . time() . $request->foto_fitur_lengkap->getClientOriginalName();
         $request->foto_fitur_lengkap->move(public_path('images/gambar_kendaraan/'), $foto_fitur_lengkap);
         $data['foto_fitur_lengkap'] = "images/gambar_kendaraan/" . $foto_fitur_lengkap;
@@ -86,13 +82,6 @@ class KendaraanController extends Controller
             $gambar = '1' . time() . $request->gambar->getClientOriginalName();
             $request->gambar->move(public_path('images/gambar_kendaraan/'), $gambar);
             $data['gambar'] = "images/gambar_kendaraan/" . $gambar;
-        }
-        
-        if($request->gambar2){
-            File::delete(public_path($kendaraan_data->gambar2));
-            $gambar2 = '2' . time() . $request->gambar2->getClientOriginalName();
-            $request->gambar2->move(public_path('images/gambar_kendaraan/'), $gambar2);
-            $data['gambar2'] = "images/gambar_kendaraan/" . $gambar2;
         }
         
         if($request->foto_fitur_lengkap){

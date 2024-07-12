@@ -12,9 +12,10 @@
             <div class="card-body">
                 <form action="" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <label for="">Content</label>
-                    <textarea name="content" id="content" rows="10" cols="80">{{$sparepart->content}}</textarea>
                     <button class="btn btn-primary mt-4" type="submit">Submit</button>
+                    <label for=""><h5>Content</h5> <p class="text-danger">Dilarang menghapus section!! hanya boleh mengganti text atau gambar (untuk mengganti gambar, pilih gambar klik kanan lalu image properties)</p></label>
+                    <textarea name="content" id="content" rows="10" cols="80">{{$sparepart->content}}</textarea>
+                    
                 </form>
             </div>
         </div>
@@ -23,14 +24,17 @@
 @endsection
 
 @section('js')
-<script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/4.22.1/standard-all/ckeditor.js"></script>
     <script>
 
         CKEDITOR.replace('content', {
 
         filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
         filebrowserUploadMethod: 'form',
-        fullPage: true,
+        allowedContent: true,
+        height: 800,
+        extraAllowedContent: '*(*)',
+        contentsCss: ['https://www.ktbfuso.co.id/wp-content/themes/ktb_fuso/dist/assets/css/styles.css?ver=6.5.2','https://www.ktbfuso.co.id/wp-content/themes/ktb_fuso/style.css?ver=1.0.1','/css/custom2.css'], 
         on: {
             instanceReady: function (evt) {
                 var editor = evt.editor;

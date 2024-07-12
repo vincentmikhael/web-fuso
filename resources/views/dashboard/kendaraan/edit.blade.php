@@ -44,17 +44,20 @@
                     </div>
                     
                     <div class="col-md-6">
-                        <label for="">Gambar thumbnail png</label>
+                        <label for="">Gambar utama</label>
+                        <small>*gambar berukuran 888x518</small>
                         <input type="file" class="form-control" name="gambar">
                     </div>
 
-                    <div class="col-md-6">
-                        <label for="">Gambar untuk halaman utama (berbackground)</label>
-                    <input type="file" class="form-control" name="gambar2">
+                    <div class="col-md-12">
+                        <label for="">Deskripsi</label>
+                        <input type="text" value="{{$kendaraan->deskripsi}}" class="form-control" name="deskripsi">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="">Beban muatan</label>
+                        <input type="text" required value="{{$kendaraan->muatan}}" class="form-control" name="muatan">
                     </div>
                     
-                    <label for="">Beban muatan</label>
-                    <input type="text" required value="{{$kendaraan->muatan}}" class="form-control" name="muatan">
                     <div class="col-md-6">
                         <label for="">Deskripsi section fitur lengkap</label>
                         <input type="text" value="{{$kendaraan->fitur_lengkap}}" required class="form-control" name="fitur_lengkap">
@@ -81,6 +84,10 @@
                     <label for="">Foto section chasis</label>
                     <small style="color: red; font-size 11px;">Foto wajib horizontal / berukuran 846 x 596</small>
                     <input type="file" class="form-control" name="foto_chasis">
+                </div>
+                <div class="col-md-6">
+                    <label for="">Deskripsi brake shoe</label>
+                    <input type="text" value="{{$kendaraan->brake}}" class="form-control" name="brake">
                 </div>
                 <div class="col-12">
                     <hr>

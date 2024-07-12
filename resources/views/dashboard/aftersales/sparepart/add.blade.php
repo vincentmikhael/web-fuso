@@ -14,34 +14,30 @@
                     <label for="">Kategori sparepart</label>
                     <select required name="kategori_id" class="form-select">
                         <option selected disabled>Pilih kategori</option>
-                        @foreach ($kategori as $item)
-                            <option value="{{$item->id}}">{{$item->nama}}</option>
-                        @endforeach
+                        <option value="Engine">Engine</option>
+                        <option value="Fuel">Fuel</option>
+                        <option value="Cooling">Cooling</option>
+                        <option value="Clutch">Clutch</option>
+                        <option value="Intake & Exhaust">Intake & Exhaust</option>
+                        <option value="Front Axle">Front Axle</option>
+                        <option value="Front Suspension">Front Suspension</option>
+                        <option value="Rear Axle">Rear Axle</option>
+                        <option value="Oil & Fluid & Chemical">Oil & Fluid & Chemical</option>
+                        <option value="Steering">Steering</option>
+                        <option value="Brake">Brake</option>
+                        <option value="Wheel & Tire">Wheel & Tire</option>
+                        <option value="Propeller Shaft">Propeller Shaft</option>
+                        <option value="Rear Suspension">Rear Suspension</option>
+                        <option value="Interior">Interior</option>
                     </select>
-                    <label for="">Harga</label>
-                    <input type="text" required onkeyup="inputRp(this,'Rp')" class="form-control" name="harga">
+                    <label for="">Kode material</label>
+                    <input type="text" required class="form-control" name="material">
+                    <label for="">Material grup</label>
+                    <input type="text" required class="form-control" name="material_grup">
+                    <label for="">Deskripsi</label>
+                    <input type="text" required class="form-control" name="deskripsi">
                     <label for="">Gambar</label>
                     <input type="file" required class="form-control" name="gambar">
-
-                    <div onclick="addRow()" class="btn btn-primary mt-3">Add row</div>
-                    <div id="row_link">
-                        <div class="row">
-                            <div class="col-3">
-                                <label for="">Online shop</label>
-                                <select required type="number" name="item[0][nama]" class="form-select">
-                                    <option value="Shopee" selected>Shopee</option>
-                                    <option value="Tokopedia">Tokopedia</option>
-                                    <option value="Lazada">Lazada</option>
-                                    <option value="Blibli">Blibli</option>
-                                    <option value="Bukalapak">Bukalapak</option>
-                                </select>
-                            </div>
-                            <div class="col-9">
-                                <label for="">Link</label>
-                                <input required type="text" name="item[0][link]" class="form-control">
-                            </div>
-                        </div>
-                    </div>
 
                     <button class="btn btn-primary mt-4">Submit</button>
                 </form>

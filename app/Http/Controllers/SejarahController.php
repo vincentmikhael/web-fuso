@@ -25,18 +25,18 @@ class SejarahController extends Controller
         
         DB::table('sejarah_perusahaan_timeline')->truncate();
         $data = [];
-        foreach($request->item as $item){
-            if($item['tahun'] && $item['deskripsi']){
-                $data[] = [
-                    "tahun" => $item['tahun'],
-                    "deskripsi" => $item['deskripsi']
-                ];
-            }
+        // foreach($request->item as $item){
+        //     if($item['tahun'] && $item['deskripsi']){
+        //         $data[] = [
+        //             "tahun" => $item['tahun'],
+        //             "deskripsi" => $item['deskripsi']
+        //         ];
+        //     }
             
-        }
-        if(count($data) > 0){
-            DB::table('sejarah_perusahaan_timeline')->insert($request->item);
-        }
+        // }
+        // if(count($data) > 0){
+        //     DB::table('sejarah_perusahaan_timeline')->insert($request->item);
+        // }
         $update = $request->except(['item','_token']);
         $update['updated_by'] = Auth::user()->username;
         $sejarah = DB::table('sejarah_perusahaan')->where('id',1)->first();

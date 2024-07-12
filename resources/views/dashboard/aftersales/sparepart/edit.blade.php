@@ -13,58 +13,35 @@
                     <input type="text" value="{{$sparepart->nama}}" required class="form-control" name="nama">
                     <label for="">Kategori sparepart</label>
                     <select required name="kategori_id" class="form-select">
-                        <option selected disabled>Pilih kategori</option>
-                        @foreach ($kategori as $item)
-                            <option value="{{$item->id}}" {{$sparepart->kategori_id == $item->id ? 'selected' : ''}}>{{$item->nama}}</option>
-                        @endforeach
+                        <option disabled>Pilih kategori</option>
+                        <option value="Engine" {{ $sparepart->kategori_id == 'Engine' ? 'selected' : '' }}>Engine</option>
+                        <option value="Fuel" {{ $sparepart->kategori_id == 'Fuel' ? 'selected' : '' }}>Fuel</option>
+                        <option value="Cooling" {{ $sparepart->kategori_id == 'Cooling' ? 'selected' : '' }}>Cooling</option>
+                        <option value="Clutch" {{ $sparepart->kategori_id == 'Clutch' ? 'selected' : '' }}>Clutch</option>
+                        <option value="Intake & Exhaust" {{ $sparepart->kategori_id == 'Intake & Exhaust' ? 'selected' : '' }}>Intake & Exhaust</option>
+                        <option value="Front Axle" {{ $sparepart->kategori_id == 'Front Axle' ? 'selected' : '' }}>Front Axle</option>
+                        <option value="Front Suspension" {{ $sparepart->kategori_id == 'Front Suspension' ? 'selected' : '' }}>Front Suspension</option>
+                        <option value="Rear Axle" {{ $sparepart->kategori_id == 'Rear Axle' ? 'selected' : '' }}>Rear Axle</option>
+                        <option value="Oil & Fluid & Chemical" {{ $sparepart->kategori_id == 'Oil & Fluid & Chemical' ? 'selected' : '' }}>Oil & Fluid & Chemical</option>
+                        <option value="Steering" {{ $sparepart->kategori_id == 'Steering' ? 'selected' : '' }}>Steering</option>
+                        <option value="Brake" {{ $sparepart->kategori_id == 'Brake' ? 'selected' : '' }}>Brake</option>
+                        <option value="Wheel & Tire" {{ $sparepart->kategori_id == 'Wheel & Tire' ? 'selected' : '' }}>Wheel & Tire</option>
+                        <option value="Propeller Shaft" {{ $sparepart->kategori_id == 'Propeller Shaft' ? 'selected' : '' }}>Propeller Shaft</option>
+                        <option value="Rear Suspension" {{ $sparepart->kategori_id == 'Rear Suspension' ? 'selected' : '' }}>Rear Suspension</option>
+                        <option value="Interior" {{ $sparepart->kategori_id == 'Interior' ? 'selected' : '' }}>Interior</option>
                     </select>
-                    <label for="">Harga</label>
-                    <input type="text" value="{{$sparepart->harga}}" required onkeyup="inputRp(this,'Rp')" class="form-control" name="harga">
+                    <label for="">Kode material</label>
+                    <input type="text" value="{{$sparepart->material}}" required class="form-control" name="material">
+                    <label for="">Material grup</label>
+                    <input type="text" required value="{{$sparepart->material_grup}}" class="form-control" name="material_grup">
+                    <label for="">Deskripsi</label>
+                    <input type="text" value="{{$sparepart->deskripsi}}" required class="form-control" name="deskripsi">
                     <label for="">Gambar</label>
                     <input type="file" class="form-control" name="gambar">
 
-                    <div onclick="addRow()" class="btn btn-primary mt-3">Add row</div>
-                    <div id="row_link">
-                        @forelse ($link as $idx => $item)
-                        <div class="row">
-                            <div class="col-3">
-                                <label for="">Online shop</label>
-                                <select required type="number" name="item[{{$idx}}][nama]" class="form-select">
-                                    <option value="Shopee" {{$item->nama == "Shopee" ? 'selected' : ''}} >Shopee</option>
-                                    <option value="Tokopedia" {{$item->nama == "Tokopedia" ? 'selected' : ''}}>Tokopedia</option>
-                                    <option value="Lazada" {{$item->nama == "Lazada" ? 'selected' : ''}}>Lazada</option>
-                                    <option value="Blibli" {{$item->nama == "Blibli" ? 'selected' : ''}}>Blibli</option>
-                                    <option value="Bukalapak" {{$item->nama == "Bukalapak" ? 'selected' : ''}}>Bukalapak</option>
-                                </select>
-                            </div>
-                            <div class="col-9">
-                                <label for="">Link</label>
-                                <input required value="{{$item->link}}" type="text" name="item[{{$idx}}][link]" class="form-control">
-                            </div>
-                        </div>
-                        @empty
-                        <div class="row">
-                            <div class="col-3">
-                                <label for="">Online shop</label>
-                                <select required type="number" name="item[0][nama]" class="form-select">
-                                    <option value="Shopee" selected>Shopee</option>
-                                    <option value="Tokopedia">Tokopedia</option>
-                                    <option value="Lazada">Lazada</option>
-                                    <option value="Blibli">Blibli</option>
-                                    <option value="Bukalapak">Bukalapak</option>
-                                </select>
-                            </div>
-                            <div class="col-9">
-                                <label for="">Link</label>
-                                <input required type="text" name="item[0][link]" class="form-control">
-                            </div>
-                        </div>
-                        @endforelse
-                        
-                    </div>
-
                     <button class="btn btn-primary mt-4">Submit</button>
                 </form>
+
             </div>
         </div>
     </div>

@@ -94,13 +94,12 @@ class BeritaController extends Controller
     public function list(Request $request){
         $berita = Berita::query();
         
-        if($request->get('kategori') == 'Berita'){
-            $berita->where('kategori','Berita');
-        }else if($request->get('kategori') == 'Siaranpers'){
+        if($request->get('kategori') == 'Siaran Pers'){
             $berita->where('kategori','Siaran Pers');
-        }else if($request->get('kategori') == 'Promosi'){
-            $berita->where('kategori','Promo');
+        }else if($request->get('kategori') == 'Fuso Update'){
+            $berita->where('kategori','Fuso Update');
         }
+        
         if($request->get('search')){
             $berita->where('judul','like','%'.$request->get('search').'%');
         }
@@ -111,6 +110,7 @@ class BeritaController extends Controller
 
     public function show($slug){
         $berita = Berita::where('slug',$slug)->first();
-        return view('main/berita/show',compact('berita'));
+        $list = Berita::where('kategori',$berita->kategori)->limit(5)->get();
+        return view('main/berita/show',compact('berita','list'));
     }
 }

@@ -1,0 +1,358 @@
+
+            .ourserv__col .services_modal {
+                text-decoration: none;
+            }
+            .ourserv__content-figure {
+              display: flex;
+              height: 155px;
+              align-items: center;
+            }
+            .footer__menu-custom {
+                list-style: none;
+                padding-left: 0;
+            }
+            .footer__menu-custom li:not(:last-child) {
+                padding-bottom: 15px;
+            }
+            .footer__menu-custom li a {
+                display: inline-block;
+            }
+            @media screen and (min-width: 800px) {
+                .modal-dialog {
+                    max-width: 750px;
+                }
+            }
+            @media screen and (max-width: 767px) {
+                .footer__menu-custom {
+                    display: flex;
+                    flex-wrap: wrap;
+                }  
+                .footer__menu-custom li {
+                    width: 50%;
+                }
+            }
+    
+            .abouts .director {
+                background-color: #f5f5f5;
+                padding-top: 4rem;
+            }
+            .rm-bod-list {
+                background-color: #ffffff;
+                margin-bottom: 30px;
+            }
+            .rm-bod-list figure {
+                margin-bottom: 0;
+            }
+            .rm-bod-content {
+                border: 1px solid #cecece;
+                padding: 20px;
+            }
+            .rm-bod-content h3 {
+                font-size: 16px;
+                margin-bottom: 0.25rem;
+            }
+            .rm-bod-content p {
+                margin-bottom: 0;
+                font-size: 14px;
+            }
+            @media screen and (max-width: 767px) {
+                .abouts .director {
+                    padding-top: 2rem;
+                    padding-bottom: 1rem;
+                }
+                .rm-bod-list {
+                    margin-bottom: 20px;
+                }
+            }
+    
+            /*dealer*/
+            .mr-sort-dealer {
+                position: relative;
+                display: flex;
+                align-items: center;
+                max-width: 300px;
+                margin-left: auto;
+            }
+            .mr-sort-dealer::after {
+                content: '';
+                width: 0; 
+                height: 0; 
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-top: 8px solid #000;
+                position: absolute;
+                right: 15px;
+                top: 19px;
+            }
+            .mr-sort-dealer label {
+                font-weight: 600;
+                white-space: nowrap;
+            }
+            .mr-sort-dealer select {
+                padding: 10px;
+            }
+            @media screen and (max-width: 767px) {
+                .mr-sort-dealer {
+                    max-width: 100%;
+                    margin-top: 1.5rem;
+                }
+    
+            }
+    
+            /* News */
+            .rm-mobile-only {
+              display: none;
+            }
+            .news__sidebar-panel {
+                max-width: 416px;
+            }
+            .news__sidebar-panel h4 {
+              font-weight: 700;
+              margin-bottom: 1rem;
+            }
+            .news__sidebar-inner {
+                background-color: #fff;
+                border: 1px solid #eaeaea;
+            }
+            .news__sidebar-list {
+                padding: 10px;
+            }
+            .news__sidebar-list:not(:last-child) {
+                border-bottom: 1px solid #eaeaea;
+            }
+            .news__sidebar-list strong {
+                display: inline-block;
+                font-size: 14px;
+                line-height: 1;
+                margin-bottom: .4rem
+            }
+            .news__sidebar-list h5 {
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 1.46;
+                margin: 0;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+            }
+            .news__sidebar-list h5 a {
+                color: #000;
+                text-decoration: none;
+                transition: .3s ease-in-out;
+            }
+            .news__sidebar-list h5 a:hover {
+                color: #fe5e00;
+            }
+            .news__sidebar-view {
+              margin-top: 1.25rem;
+            }
+            .news__sidebar-view a {
+              font-weight: 700;
+              color: #fe5e00;
+              text-decoration: none;
+            }
+            @media screen and (max-width: 767px) {
+              .news__sidebar-panel {
+                position: static !important;
+                height: 100% !important;
+                max-width: 100% !important;
+              }
+              .rm-desktop-only {
+                display: none;
+              }
+              .rm-mobile-only {
+                display: block;
+              }
+            }
+    
+            /*Sparepart*/
+            .rm-gallery {
+              border-top: 1px solid #323232;
+              padding-top: 70px;
+              margin-top: 20px;
+            }
+            .rm-gallery__cat {
+              padding-left: 0;
+              display: flex;
+              list-style: none;
+              margin-top: 1.75rem;
+              margin-bottom: 2.5rem;
+              padding-bottom: 1rem;
+              overflow-y: hidden;
+            }
+            .rm-gallery__cat li a {
+              margin-right: 15px;
+              white-space: nowrap;
+            }
+            .mr-gallery__pannel {
+              margin-left: -8px;
+              margin-right: -8px;
+            }
+            .mr-gallery__list {
+              flex: 0 0 auto;
+              width: 20%;
+              padding-left: 8px;
+              padding-right: 8px;
+              padding-bottom: 16px;
+            }
+            .mr-gallery__inner {
+              display: block;
+              height: 100%;
+              border: 1px solid #eaeaea;
+              text-decoration: none;
+            }
+            .mr-gallery__content {
+              position: relative;
+              padding: 12px 15px 15px;
+            }
+            .mr-gallery__content span {
+              font-weight: 700;
+              display: inline-block;
+              font-size: 14px;
+              color: #fe5e00;
+              margin-bottom: 0.5rem;
+            }
+            .mr-gallery__content h3 {
+              font-size: 16px;
+              line-height: 1.46;
+              margin-bottom: 0;
+            }
+            .mr-gallery__content p {
+              font-size: 14px;
+              font-weight: 500;
+              margin-top: .5rem;
+              margin-bottom: 0;
+              color: #333;
+            }
+            .mr-gallery__content svg {
+              position: absolute;
+              right: 15px;
+              bottom: 15px;
+            }
+            .mr-gallery__inner:hover .mr-gallery__content svg {
+              fill: #fe5e00;
+            }
+            @media screen and (max-width: 767px) {
+              .rm-gallery {
+                padding-top: 50px;
+              }
+              .mr-gallery__list {
+                width: 50%;
+              }
+              .mr-gallery__content span {
+                font-size: 12px;
+                margin-bottom: 0.25rem;
+              }
+              .mr-gallery__content h3 {
+                font-size: 14px;
+              }
+              .mr-gallery__content p {
+                font-size: 12px;
+              }
+            }
+            
+            /* 20230727_184355 */
+            /* Telematics */
+            .fitur-bengkel {
+              background-color: #333;
+              color: #fff;
+            }
+            .fitur-bengkel h2 {
+              color: #fff;
+            }
+            .fitur-bengkel figure {
+              max-width: 600px;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .manfaat-bengkel {
+              padding-bottom: 0;
+            }
+    
+            @media screen and (min-width: 992px) {
+              .fitur-bengkel .section__title--half {
+                width: 60%;
+              }
+            }
+    
+            @media screen and (max-width: 767px) {
+              .section__title.telematic {
+                text-align: center
+              }
+            }
+    
+            
+            /* Aplikasi Runner */
+            .variant.runner {
+              background-color: #fff;
+              color: black;
+            }
+            ul li a {
+                color: inherit;
+                text-decoration: none;
+            }
+            .current,
+            .current p {
+                color: #fe5e00;
+            }
+            .runner-feature-menu-title {
+                font-weight: 700;
+                font-size: 14px !important;
+            }
+            .runner-feature-menu-mobile {
+                border: 1px solid #D9D9D9;
+                padding: 17px 10px 5px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .runner-feature-title {
+                font-size: 18px;
+                color: black;
+                font-weight: 800;
+            }
+            .border-removed {
+                border: none !important; 
+            }
+            @media screen and (max-width: 767px) {
+                .runner-feature-menu-title {
+                    font-size: 9px !important;
+                }
+                .runner-feature-title {
+                    font-weight: 700;
+                }
+            }
+    
+        /*10.10 update*/
+        .product-details .other .other__wrapper {
+          justify-content: center;
+          min-height: 340px;
+        }
+        .product-details .other .other__wrapper img {
+          margin-bottom: 80px;
+        }
+        .product-details .other .other__wrapper a {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          padding: 25px;
+          bottom: 0;
+        }
+            @media screen and (max-width: 767px) {
+          .product-details .other .other__wrapper img {
+            margin-bottom: 50px;
+          }
+            }
+    
+        /*MyFUSO*/
+        .download__myfuso a {
+          font-size: 24px;
+        }
+        .download__myfuso-google a {
+          max-width: 250px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }

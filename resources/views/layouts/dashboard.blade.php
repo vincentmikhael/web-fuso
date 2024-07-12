@@ -98,6 +98,14 @@
             <span class="nav-link-text ms-1">CMS berita</span>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/office">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-notification-70 text-primary text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">CMS Office</span>
+          </a>
+        </li>
           <li class="nav-item">
           <a class="nav-link " href="/sejarah_perusahaan">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
@@ -123,6 +131,15 @@
               <i class="ni ni-bus-front-12 text-primary text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Manajemen Cabang</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="/karir">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-bus-front-12 text-primary text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Karir</span>
           </a>
         </li>
 

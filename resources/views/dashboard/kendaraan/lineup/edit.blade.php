@@ -37,7 +37,7 @@
                             </select>
                         </div>
 
-                        <div class="col-md-6">
+                        {{-- <div class="col-md-6">
                             <input type="hidden" name="kendaraan_id">
                             <label for="">Jumlah ban</label>
                             <input type="number" value="{{$lineup->ban}}" required class="form-control" name="ban">
@@ -46,7 +46,7 @@
                             <input type="hidden" name="kendaraan_id">
                             <label for="">PS</label>
                             <input type="number" required value="{{$lineup->ps}}" class="form-control" name="ps">
-                        </div>
+                        </div> --}}
 
                         <div class="col-md-4">
                             <input type="hidden" name="kendaraan_id">

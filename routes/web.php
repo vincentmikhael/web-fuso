@@ -21,6 +21,7 @@ use App\Http\Controllers\Karir\KarirApplyController;
 use App\Http\Controllers\Karir\KarirController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\OfficeController;
 use App\Http\Controllers\SejarahController;
 use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
@@ -37,7 +38,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [MainController::class,'index']);
-
+Route::get('/service/telematics',function(){
+    return view('main.aftersales.telematics');
+});
 Route::get('/tentang-kami/sejarah-perusahaan',[SejarahController::class,'show']);
 
 
@@ -89,6 +92,13 @@ Route::get('/cabang/edit/{id}',[CabangController::class,'edit']);
 Route::post('/cabang/edit/{id}',[CabangController::class,'update']);
 Route::get('/cabang/delete/{id}',[CabangController::class,'delete']);
 
+Route::get('/office',[OfficeController::class,'index']);
+Route::get('/office/add',[OfficeController::class,'add']);
+Route::post('/office/add',[OfficeController::class,'add_action']);
+Route::get('/office/edit/{id}',[OfficeController::class,'edit']);
+Route::post('/office/edit/{id}',[OfficeController::class,'update']);
+Route::get('/office/delete/{id}',[OfficeController::class,'delete']);
+
 Route::get('/service',[ServiceController::class,'index']);
 Route::post('/service',[ServiceController::class,'add_action']);
 
@@ -126,8 +136,6 @@ Route::post('/list-karir/{slug}',[KarirApplyController::class,'add_action']);
 
 Route::get('/berita',[BeritaController::class,'list']);
 Route::get('/berita/{slug}',[BeritaController::class,'show']);
-
-
 
 
 

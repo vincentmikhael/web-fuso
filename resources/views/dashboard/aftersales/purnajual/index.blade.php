@@ -12,15 +12,15 @@
             <div class="card-body">
                 <form action="" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <label for="">Background atas</label>
-                    <input type="file" class="form-control" name="gambar">
-                    <label for="">Text Heading</label>
-                    <input type="text" class="form-control" value="{{$purnajual->text1}}" name="text1">
-                    <label for="">Sub Text</label>
-                    <input type="text" class="form-control" value="{{$purnajual->text2}}" name="text2">
-                    <label for="">Deskripsi</label>
-                    <textarea name="content" id="content" rows="10" cols="80">{{$purnajual->content}}</textarea>
                     <button class="btn btn-primary mt-4" type="submit">Submit</button>
+                    <label for=""><h5>Content</h5> <p class="text-danger">Dilarang menghapus section!! hanya boleh mengganti text atau gambar (untuk mengganti gambar, pilih gambar klik kanan lalu image properties)</p></label>
+                    <textarea name="content" id="content" rows="10" cols="80">
+                        <link rel="stylesheet" id="ktb_fuso-style-css" href="https://www.ktbfuso.co.id/wp-content/themes/ktb_fuso/style.css?ver=1.0.1" media="all">
+    <link rel="stylesheet" id="main-css" href="https://www.ktbfuso.co.id/wp-content/themes/ktb_fuso/dist/assets/css/styles.css?ver=6.5.2" media="all">
+    <link rel="stylesheet" id="wp-block-library-css" href="https://www.ktbfuso.co.id/wp-includes/css/dist/block-library/style.css?ver=6.5.2" media="all">
+                        {{$purnajual->content}}
+                    </textarea>
+                    
                 </form>
             </div>
         </div>
@@ -29,13 +29,20 @@
 @endsection
 
 @section('js')
-<script src="https://cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/4.22.1/standard-all/ckeditor.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
 
-        CKEDITOR.replace('content', {
 
+        CKEDITOR.replace('content', {
         filebrowserUploadUrl: "{{route('ckeditor.upload', ['_token' => csrf_token() ])}}",
         filebrowserUploadMethod: 'form',
+        allowedContent: true,
+        height: 800,
+        extraAllowedContent: '*(*)',
+        extraPlugins: 'preview',
+        contentsCss: ['https://www.ktbfuso.co.id/wp-content/themes/ktb_fuso/dist/assets/css/styles.css?ver=6.5.2','https://www.ktbfuso.co.id/wp-content/themes/ktb_fuso/style.css?ver=1.0.1','/css/custom2.css'], 
         on: {
             instanceReady: function (evt) {
                 var editor = evt.editor;
@@ -98,5 +105,24 @@
             }
         }
     });
+
+    CKEDITOR.on('instanceReady', function(ev) {
+            var editor = ev.editor;
+            var iframe = $(editor.container.$).find('iframe').get(0);
+            var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+            $(iframeDoc).on('click', 'button', function(e) {
+                e.preventDefault();
+                console.log(this.id)
+                $('.tab-pane').removeClass('active show')
+                $('#'+this.id+'-pane').addClass('active show')
+                console.log(document.querySelector('#'+this.id+'-pane'))
+                $(this).tab('show');
+                this.parentElement.parentElement.nextElementSibling.querySelectorAll('.tab-pane').forEach(function(e){
+                    e.classList.remove('active','show')
+                })
+                console.log(this.parentElement.parentElement.nextElementSibling.querySelector('#'+this.id+'-pane').classList.add('active','show'))
+            });
+        });
     </script>
 @endsection

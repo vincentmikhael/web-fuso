@@ -25,14 +25,16 @@ class CarouselController extends Controller
                     $imageName = $idx + time().'.'.$item['background']->extension();
                     $item['background']->move(public_path('images/banner/'), $imageName);
                 }
+                if($item['background_mobile']){
+                    $imageName2 = $idx + time().'.'.$item['background_mobile']->extension();
+                    $item['background_mobile']->move(public_path('images/banner/'), $imageName);
+                }
                 $data[] = [
-                    "link" => $item['link'],
-                    "background" => $imageName ? 'images/banner/'.$imageName : ''
+                    "background" => $imageName ? 'images/banner/'.$imageName : '',
+                    "background_mobile" => $imageName ? 'images/banner/'.$imageName2 : ''
                 ];
             }else{
-                $updated = [
-                    "link" => $item['link'],
-                ];
+                $updated = [];
                 if(isset($item['background'])){
                     $banner = Banner::where('id',$item['id'])->first();
                     File::delete(public_path($banner->background));
@@ -40,7 +42,17 @@ class CarouselController extends Controller
                     $item['background']->move(public_path('images/banner/'), $imageName);
                     $updated["background"] ='images/banner/' . $imageName;
                 }
-                Banner::where('id',$item['id'])->update($updated);
+                if(isset($item['background_mobile'])){
+                    $banner = Banner::where('id',$item['id'])->first();
+                    File::delete(public_path($banner->background_mobile));
+                    $imageName = $idx + time().'.'.$item['background_mobile']->extension();
+                    $item['background_mobile']->move(public_path('images/banner/'), $imageName);
+                    $updated["background_mobile"] ='images/banner/' . $imageName;
+                }
+                if(count($updated) > 0){
+                    Banner::where('id',$item['id'])->update($updated);
+                }
+                
             }
         }
 

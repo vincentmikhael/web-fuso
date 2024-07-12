@@ -57,4 +57,7 @@ a{
     .only__desktop {
         display:none!important
     }
+    .header__float{
+        bottom: 15%;
+    }
 }
