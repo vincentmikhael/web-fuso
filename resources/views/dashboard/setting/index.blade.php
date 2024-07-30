@@ -61,6 +61,14 @@
                         <input type="text" required value="{{$setting->jam_operasional}}" name="jam_operasional" class="form-control">
                     </div>
                     <div class="col-md-6">
+                        <label for="">Hari operasional 2</label> <br>
+                        <input type="text" required value="{{$setting->hari_operasional2}}" name="hari_operasional2" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="">Jam Operasional 2</label> <br>
+                        <input type="text" required value="{{$setting->jam_operasional2}}" name="jam_operasional2" class="form-control">
+                    </div>
+                    <div class="col-md-6">
                         <label for="">Email</label> <br>
                         <input type="text" required value="{{$setting->email}}" name="email" class="form-control">
                     </div>
@@ -80,10 +88,14 @@
                         <label for="">Link facebook</label>
                         <input type="text" required value="{{$setting->facebook}}" name="facebook" class="form-control">
                     </div>
-                    {{-- <div class="col-md-6">
-                        <label for="">Link twitter</label>
+                    <div class="col-md-6">
+                        <label for="">Link linkedin</label>
+                        <input type="text" required value="{{$setting->linkedin}}" name="linkedin" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="">Link tiktok</label>
                         <input type="text" required value="{{$setting->twitter}}" name="twitter" class="form-control">
-                    </div> --}}
+                    </div>
                     <div class="col-md-6"></div>
                     {{-- <div class="col-md-6">
                         <label for="">Alamat kantor pusat</label>

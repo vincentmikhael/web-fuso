@@ -15,6 +15,7 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                  <a href="/setting" class="mt-3">Open dashboard</a>
                 </div>
             </div>
         </div>

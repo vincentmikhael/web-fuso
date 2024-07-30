@@ -142,23 +142,23 @@
 </section>
 
 <section id="about" class="about">
-	<div class="container">
+	<div class="container mb-md-5 pb-mb-5">
 		<div class="section__title">
 			<h2>
-				Mitsubishi FUSO siap mengawal dan menjalankan roda niaga Indonesia
+				Sulawesi Berlian Motor siap mengawal dan menjalankan roda niaga Indonesia
 			</h2>
 			<p>
-				Dibangun sejak tahun 1970, sebagai pionir kendaraan niaga Indonesia Mitsubishi FUSO sukses mempertahankan kepemimpinan pasar secara absolut dengan populasi truk terbesar di Indoensia.
+				PT Sulawesi Berlian Motor (SBM) merupakan dealer resmi Mitsubishi Fuso Truck & Bus Corporation (MFTBC) yang memasarkan kendaraan niaga merk Mitsubishi FUSO diantaranya, Canter, Fighter X dan Tractor Head.
 			</p>
 		</div>
 
-		<a href="/tentang-kami/sejarah-perusahaan" class="btn btn__primary" data-wpel-link="internal">
+		<a href="/tentang-kami/sejarah-perusahaan" class="btn btn__primary mb-3 mb-mb-5" data-wpel-link="internal">
 			Lihat Selengkapnya
 		</a>
-
+<br><br><br>
 	</div>
 	<div class="about__bg">
-		<img src="https://www.ktbfuso.co.id/wp-content/themes/ktb_fuso/public/assets/img/home/fuso-office.webp" alt="Fuso Office">
+		<img src="/img/bg.jpg" alt="Fuso Office">
 	</div>
 </section>
 
@@ -236,7 +236,7 @@
 				<div class="section__title">
 					<p>
 						Butuh bantuan atau informasi selengkapnya<br>
-						Hubungi WhatsApp Interaktif Mitsubishi FUSO Indonesia
+						Hubungi WhatsApp Interaktif Sulawesi Berlian Motor
 					</p>
 					<h2>
 						{{getSetting()->whatsapp}}
@@ -264,6 +264,10 @@
 					{{getSetting()->hari_operasional}}<br>
 					{{getSetting()->jam_operasional}}
 				</h3>
+				<h3>
+					{{getSetting()->hari_operasional2}}<br>
+					{{getSetting()->jam_operasional2}}
+				</h3>
 			</div>
 		</div>
 	</div>
@@ -273,7 +277,7 @@
 	<div class="container">
 		<div class="section__title">
 			<h2>
-				Our Offices
+				Our Main Branch
 			</h2>
 		</div>
 		<div class="row">
@@ -379,7 +383,7 @@
 			<img class="telematic__img" src="https://www.ktbfuso.co.id/wp-content/themes/ktb_fuso/public/assets/img/telematic/telematics-logo.webp" alt="Logo Telematics">
 			<div class="section__title">
 				<h2>
-					Pantau Armada Fuso Anda Secara Real TIme
+					Pantau Armada Fuso Anda Secara Real Time
 				</h2>
 				<p>
 					Telematics memungkinkan Anda untuk memantau lokasi kendaraan Anda secara real-time dan otomatis. Informasi terkait posisi, arah, kecapatan dan sejarah rute yang diambil oleh kendaraan bisa dengan mudah di akses melalui layar komputer ataupun smartphone Anda.
@@ -400,7 +404,7 @@
 	<div class="container">
 		<div class="section__title text-center">
 			<h2>
-				Berita Fuso
+				Berita SBM
 			</h2>
 		</div>
 		

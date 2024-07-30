@@ -1,56 +1,5 @@
 <html lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-TFH933QT"></script><!-- Google tag (gtag.js) new commit 20230525 --><!-- Optimize Page Speed 16 Jan 24
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-267804737-1"></script>
-    --><!--
-    <script>
-    // Load the script after the user scrolls, moves the mouse, or touches the screen
-    document.addEventListener('scroll', initGTMOnEvent);
-    document.addEventListener('mousemove', initGTMOnEvent);
-    document.addEventListener('touchstart', initGTMOnEvent);
-    
-    // Or, load the script after 2 seconds
-    document.addEventListener('DOMContentLoaded', () => { setTimeout(initGTM, 1983); });
-    
-    // Initializes Google Tag Manager in response to an event
-    function initGTMOnEvent (event) {
-        initGTM();
-        event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
-    }
-    
-    // Initializes Google Tag Manager
-    function initGTM () {
-        if (window.gtmDidInit) {
-          // Don't load again
-          return false;
-        }
-    
-        window.gtmDidInit = true;
-        
-        // Create the script
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.onload = () => { 
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){ dataLayer.push(arguments); }
-          gtag('js', new Date());
-          gtag('config', 'UA-267804737-1');
-        }
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-267804737-1';
-        
-        // We are still deferring the script
-        script.defer = true;
-        
-        // Append the script to the body of the document
-        document.getElementsByTagName('body')[0].appendChild(script);
-    }
-    </script>
-        
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'UA-267804737-1');
-    </script>
+
     --><head><style>body {transition: opacity ease-in 0.2s; } 
     body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
     </style>
@@ -70,23 +19,22 @@
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
         <!-- This site is optimized with the Yoast SEO plugin v22.6 - https://yoast.com/wordpress/plugins/seo/ -->
-        <title>Truk Terbaik di Indonesia - KTB Fuso</title>
+        <title>{{getSetting()->title}}</title>
         <meta name="description" content="Mitubishi Fuso | Truk Terbaik di Indonesia">
-        <link rel="canonical" href="https://www.ktbfuso.co.id/">
-        {{-- <meta property="og:locale" content="en_US">
+        <link rel="canonical" href="{{getSetting()->meta_sitename}}">
+        <meta property="og:locale" content="en_US">
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Truk Terbaik di Indonesia - KTB Fuso">
-        <meta property="og:description" content="Mitubishi Fuso | Truk Terbaik di Indonesia">
-        <meta property="og:url" content="https://www.ktbfuso.co.id/">
-        <meta property="og:site_name" content="KTB Fuso">
-        <meta property="article:publisher" content="https://web.facebook.com/MitsubishiFUSOIndonesia">
+        <meta property="og:title" content="{{getSetting()->meta_title}}">
+        <meta property="og:description" content="{{getSetting()->meta_deskripsi}}">
+        <meta property="og:url" content="{{getSetting()->meta_sitename}}">
+        <meta property="og:site_name" content="{{getSetting()->meta_sitename}}">
+        {{-- <meta property="article:publisher" content="https://web.facebook.com/MitsubishiFUSOIndonesia">
         <meta property="article:modified_time" content="2024-04-06T05:43:27+00:00">
         <meta property="og:image" content="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/fuso-office.webp">
         <meta property="og:image:width" content="1440">
         <meta property="og:image:height" content="980">
         <meta property="og:image:type" content="image/webp">
         <meta name="twitter:card" content="summary_large_image"> --}}
-        <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.ktbfuso.co.id/","url":"https://www.ktbfuso.co.id/","name":"Truk Terbaik di Indonesia - KTB Fuso","isPartOf":{"@id":"https://www.ktbfuso.co.id/#website"},"about":{"@id":"https://www.ktbfuso.co.id/#organization"},"primaryImageOfPage":{"@id":"https://www.ktbfuso.co.id/#primaryimage"},"image":{"@id":"https://www.ktbfuso.co.id/#primaryimage"},"thumbnailUrl":"https://www.ktbfuso.co.id/wp-content/uploads/2023/02/fuso-office.webp","datePublished":"2023-02-06T05:34:36+00:00","dateModified":"2024-04-06T05:43:27+00:00","description":"Mitubishi Fuso | Truk Terbaik di Indonesia","breadcrumb":{"@id":"https://www.ktbfuso.co.id/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.ktbfuso.co.id/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.ktbfuso.co.id/#primaryimage","url":"https://www.ktbfuso.co.id/wp-content/uploads/2023/02/fuso-office.webp","contentUrl":"https://www.ktbfuso.co.id/wp-content/uploads/2023/02/fuso-office.webp","width":1440,"height":980},{"@type":"BreadcrumbList","@id":"https://www.ktbfuso.co.id/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://www.ktbfuso.co.id/#website","url":"https://www.ktbfuso.co.id/","name":"KTB Fuso","description":"Truk Terbaik di Indonesia","publisher":{"@id":"https://www.ktbfuso.co.id/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.ktbfuso.co.id/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.ktbfuso.co.id/#organization","name":"KTB Fuso","url":"https://www.ktbfuso.co.id/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.ktbfuso.co.id/#/schema/logo/image/","url":"https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-ktb-1.webp","contentUrl":"https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-ktb-1.webp","width":168,"height":162,"caption":"KTB Fuso"},"image":{"@id":"https://www.ktbfuso.co.id/#/schema/logo/image/"},"sameAs":["https://web.facebook.com/MitsubishiFUSOIndonesia","https://www.instagram.com/mitsubishifuso.id/?hl=en","https://www.youtube.com/channel/UCHXCmm4E23vRoAMeMoSLwgw","https://www.linkedin.com/company/pt-krama-yudha-tiga-berlian-motors/"]}]}</script>
         <!-- / Yoast SEO plugin. -->
     
 {{--     
@@ -575,25 +523,25 @@
     <script src="https://www.ktbfuso.co.id/wp-includes/js/jquery/jquery-migrate.js?ver=3.4.1" id="jquery-migrate-js"></script>
     
     <!-- Google Analytics snippet added by Site Kit -->
-    <script src="https://www.googletagmanager.com/gtag/js?id=GT-WBTXWSX" id="google_gtagjs-js" async=""></script>
+    {{-- <script src="https://www.googletagmanager.com/gtag/js?id=GT-WBTXWSX" id="google_gtagjs-js" async=""></script>
     <script id="google_gtagjs-js-after">
     window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
     gtag('set', 'linker', {"domains":["www.ktbfuso.co.id"]} );
     gtag("js", new Date());
     gtag("set", "developer_id.dZTNiMT", true);
     gtag("config", "GT-WBTXWSX");
-    </script>
+    </script> --}}
     
     <!-- End Google Analytics snippet added by Site Kit -->
-    <link rel="https://api.w.org/" href="https://www.ktbfuso.co.id/wp-json/"><link rel="alternate" type="application/json" href="https://www.ktbfuso.co.id/wp-json/wp/v2/pages/6"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.ktbfuso.co.id/xmlrpc.php?rsd">
+    {{-- <link rel="https://api.w.org/" href="https://www.ktbfuso.co.id/wp-json/"><link rel="alternate" type="application/json" href="https://www.ktbfuso.co.id/wp-json/wp/v2/pages/6"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.ktbfuso.co.id/xmlrpc.php?rsd"> --}}
     <meta name="generator" content="WordPress 6.5.2">
-    <link rel="shortlink" href="https://www.ktbfuso.co.id/">
-    <link rel="alternate" type="application/json+oembed" href="https://www.ktbfuso.co.id/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ktbfuso.co.id%2F">
+    <link rel="shortlink" href="{{getSetting()->meta_sitename}}">
+    {{-- <link rel="alternate" type="application/json+oembed" href="https://www.ktbfuso.co.id/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ktbfuso.co.id%2F">
     <link rel="alternate" type="text/xml+oembed" href="https://www.ktbfuso.co.id/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ktbfuso.co.id%2F&amp;format=xml">
-    <meta name="generator" content="Site Kit by Google 1.120.0"><link rel="icon" href="https://www.ktbfuso.co.id/wp-content/uploads/2024/02/cropped-FUSO_1_Square-1-32x32.webp" sizes="32x32">
-    <link rel="icon" href="https://www.ktbfuso.co.id/wp-content/uploads/2024/02/cropped-FUSO_1_Square-1-192x192.webp" sizes="192x192">
-    <link rel="apple-touch-icon" href="https://www.ktbfuso.co.id/wp-content/uploads/2024/02/cropped-FUSO_1_Square-1-180x180.webp">
-    <meta name="msapplication-TileImage" content="https://www.ktbfuso.co.id/wp-content/uploads/2024/02/cropped-FUSO_1_Square-1-270x270.webp">
+    <meta name="generator" content="Site Kit by Google 1.120.0"><link rel="icon" href="https://www.ktbfuso.co.id/wp-content/uploads/2024/02/cropped-FUSO_1_Square-1-32x32.webp" sizes="32x32"> --}}
+    <link rel="icon" href="{{asset(getSetting()->favicon)}}" sizes="192x192">
+    <link rel="apple-touch-icon" href="{{asset(getSetting()->favicon)}}">
+    <meta name="msapplication-TileImage" content="{{asset(getSetting()->favicon)}}">
         <style>
             .ourserv__col .services_modal {
                 text-decoration: none;
@@ -955,16 +903,16 @@
         </style>
         
     <script src="https://www.ktbfuso.co.id/wp-includes/js/twemoji.js?ver=6.5.2" defer=""></script><script src="https://www.ktbfuso.co.id/wp-includes/js/wp-emoji.js?ver=6.5.2" defer=""></script><style type="text/css" data-asas-style="">body, div, a, p, span{ user-select: text !important; }p, h1, h2, h3, h4, h5, h6{ cursor: auto; user-select: text !important; }::selection{ background-color: #338FFF !important; color: #fff !important; }</style><style type="text/css" data-asas-style="">body, div, a, p, span{ user-select: text !important; }p, h1, h2, h3, h4, h5, h6{ cursor: auto; user-select: text !important; }::selection{ background-color: #338FFF !important; color: #fff !important; }</style></head><body>?&gt;
-        <link rel="shortcut icon" href="https://www.ktbfuso.co.id/wp-content/themes/ktb_fuso/public/assets/img/logo-fuso.webp" type="image/x-icon">
-        <meta name="google-site-verification" content="8DKnnMQAKkeFJaapvM6Syc1zgaIaxvBsfqzbIc8NzWY">
+        <link rel="shortcut icon" href="{{asset(getSetting()->favicon)}}" type="image/x-icon">
+        {{-- <meta name="google-site-verification" content="8DKnnMQAKkeFJaapvM6Syc1zgaIaxvBsfqzbIc8NzWY"> --}}
         <!-- Added on Tue 25 Jan 2024 to have clickable breadcrumbs on product post -->
             
     
     
         
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFH933QT"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    {{-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFH933QT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> --}}
     <!-- End Google Tag Manager (noscript) --> 
         
         
@@ -973,13 +921,16 @@
             <div class="container">
                 <div class="header__top--content">
                     <span>
-                        MITSUBISHI FUSO authorized distributor
+                        MITSUBISHI FUSO authorized dealer
                     </span>
                     <div class="header__top--socmed only__desktop">
                         <a href="{{getSetting()->facebook}}" class="socmed__link" target="_blank" aria-label="Facebook KTB Fuso" data-wpel-link="external" rel="nofollow noopener noreferrer">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M8.93005 13.9981V8.53411H10.7734L11.0474 6.39478H8.93005V5.03211C8.93005 4.41478 9.10205 3.99211 9.98805 3.99211H11.1107V2.08478C10.5645 2.02624 10.0154 1.99797 9.46605 2.00011C7.83672 2.00011 6.71805 2.99478 6.71805 4.82078V6.39078H4.88672V8.53011H6.72205V13.9981H8.93005Z" fill="white"></path>
     </svg>
+                        </a>
+                        <a href="{{getSetting()->twitter}}" class="socmed__link" target="_blank" aria-label="Tiktok KTB Fuso" data-wpel-link="external" rel="nofollow noopener noreferrer">
+                            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 449.45 515.38"><path fill="white" fill-rule="nonzero" d="M382.31 103.3c-27.76-18.1-47.79-47.07-54.04-80.82-1.35-7.29-2.1-14.8-2.1-22.48h-88.6l-.15 355.09c-1.48 39.77-34.21 71.68-74.33 71.68-12.47 0-24.21-3.11-34.55-8.56-23.71-12.47-39.94-37.32-39.94-65.91 0-41.07 33.42-74.49 74.48-74.49 7.67 0 15.02 1.27 21.97 3.44V190.8c-7.2-.99-14.51-1.59-21.97-1.59C73.16 189.21 0 262.36 0 352.3c0 55.17 27.56 104 69.63 133.52 26.48 18.61 58.71 29.56 93.46 29.56 89.93 0 163.08-73.16 163.08-163.08V172.23c34.75 24.94 77.33 39.64 123.28 39.64v-88.61c-24.75 0-47.8-7.35-67.14-19.96z"/></svg>
                         </a>
                         <a href="{{getSetting()->instagram}}" class="socmed__link" target="_blank" aria-label="Instagram KTB Fuso" data-wpel-link="external" rel="nofollow noopener noreferrer">
                             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1400,7 +1351,7 @@
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navNews" class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-                                    Berita Fuso
+                                    Berita SBM
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
@@ -1554,7 +1505,7 @@
                         </li>
                         <li>
                             <a href="/berita?kategori=Siaran Pers" data-wpel-link="internal">
-                                Berita Fuso
+                                Berita SBM
                             </a>
                         </li>
                         <li>
@@ -1602,6 +1553,11 @@
     </svg>
     
                         </a>
+                        <a href="{{getSetting()->twitter}}" target="_blank" aria-label="Tiktok KTB Fuso" data-wpel-link="external" rel="nofollow noopener noreferrer">
+                            <img src="https://img.icons8.com/?size=30&id=118638&format=png&color=ffffff" alt="">
+    
+                        </a>
+
                         <a href="{{getSetting()->instagram}}" target="_blank" aria-label="Instagram KTB Fuso" data-wpel-link="external" rel="nofollow noopener noreferrer">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_408_2463)">

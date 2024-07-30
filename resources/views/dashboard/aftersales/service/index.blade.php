@@ -25,6 +25,8 @@
 
 @section('js')
 <script src="https://cdn.ckeditor.com/4.22.1/standard-all/ckeditor.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
 
         CKEDITOR.replace('content', {
@@ -97,5 +99,51 @@
             }
         }
     });
+
+    CKEDITOR.on('instanceReady', function(ev) {
+        console.log('tes ll')
+            var editor = ev.editor;
+            var iframe = $(editor.container.$).find('iframe').get(0);
+            var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            $(iframeDoc).on('click', '.btn-close', function(e) {
+
+                iframeDoc.querySelectorAll('.modal').forEach(e=>{
+                    
+                })
+   
+            })
+
+            $(iframeDoc).on('click', '.ourserv__col', function(e) {
+                e.preventDefault();
+                console.log(e.target)
+                let a = this
+
+                if(e.target.classList.contains('btn-close')){
+a.querySelector('.modal').classList.remove('show')
+                a.querySelector('.modal').style.display = 'none'
+                }else{
+a.querySelector('.modal').classList.add('show')
+                a.querySelector('.modal').style.display = 'block'
+                }
+
+                
+      
+            
+                // console.log(this.querySelector('a'))
+                // this.querySelector('a').click()
+                // console.log(idData.substring(1))
+                // var myModal = new bootstrap.Modal(document.getElementById(idData.substring(1)));
+                // myModal.show();
+                // console.log(this.id)
+                // $('.tab-pane').removeClass('active show')
+                // $('#'+this.id+'-pane').addClass('active show')
+                // console.log(document.querySelector('#'+this.id+'-pane'))
+                // $(this).tab('show');
+                // this.parentElement.parentElement.nextElementSibling.querySelectorAll('.tab-pane').forEach(function(e){
+                //     e.classList.remove('active','show')
+                // })
+                // console.log(this.parentElement.parentElement.nextElementSibling.querySelector('#'+this.id+'-pane').classList.add('active','show'))
+            });
+        });
     </script>
 @endsection

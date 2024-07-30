@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section id="breadcrumbs" style="margin-top: 52px;" class="breadcrumbs mb-5">
+<section id="breadcrumbs" style="margin-top: 82px;" class="breadcrumbs mb-5">
   <div class="container">
       <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
