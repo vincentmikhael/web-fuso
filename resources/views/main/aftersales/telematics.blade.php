@@ -170,7 +170,7 @@
                 </figure>
             </div>
         </section>
-{{--     
+    
         <section id="cs" class="cs">
             <div class="container">
                 <div class="row gy-3 cs__row">
@@ -208,7 +208,7 @@
                 </div>
             </div>
         </section>
-     --}}
+    
     
     </main>
 

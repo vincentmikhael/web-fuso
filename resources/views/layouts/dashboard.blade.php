@@ -124,6 +124,14 @@
             <span class="nav-link-text ms-1">Manajemen Kendaraan</span>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/sparepart">
+            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="ni ni-bus-front-12 text-primary text-sm opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Manajemen Sparepart</span>
+          </a>
+        </li>
 
           <li class="nav-item">
           <a class="nav-link " href="/cabang">
@@ -155,14 +163,14 @@
             <span class="nav-link-text ms-1">CMS Service</span>
           </a>
         </li>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
           <a class="nav-link " href="/purnajual">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
               <i class="ni ni-single-copy-04 text-primary text-sm opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">CMS Purnajual</span>
           </a>
-        </li>
+        </li> --}}
         <li class="nav-item">
           <a class="nav-link " href="/cms_sparepart">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">

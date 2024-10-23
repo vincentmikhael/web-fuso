@@ -57,9 +57,22 @@ Fighter X
                         @forelse (getTipeLineup($kendaraan->id) as $idx => $item)
                         <li id="{{$item}}">
                           <div class="variant__icon">
-                              <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-bus.webp" alt="bus">
+                          
+                            @if ($idx == 0)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-bus.webp" alt="bus">
+                            @elseif ($idx == 1)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-capacity.webp" alt="bus">
+                            @elseif ($idx == 2)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-economical.webp" alt="bus">
+                            @elseif ($idx == 3)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-power.webp" alt="bus">
+                            @elseif ($idx == 4)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-speed.webp" alt="bus">
+                      
+                            @endif
+                              
                           </div>
-                          {{$item}}</li>
+                          {{str_replace('Super', '', $item)}}</li>
                         @empty
                                 
                         @endforelse

@@ -11,9 +11,9 @@
                     @csrf
                     <label>Kategori</label>
                     <select class="form-select" name="kategori" id="">
-                        <option value="Berita" selected>Berita</option>
-                        <option value="Promo">Promo</option>
-                        <option value="Siaran Pers">Siaran Pers</option>
+                        <option value="Berita" {{$berita->kategori == 'Berita' ? 'selected' : ''}}>Berita</option>
+                        <option value="Media" {{$berita->kategori == 'Media' ? 'selected' : ''}}>Media</option>
+                        <option value="Siaran Pers" {{$berita->kategori == 'Siaran Pers' ? 'selected' : ''}}>Siaran Pers</option>
                     </select>
                     <label for="">Judul</label>
                     <input type="text" value="{{$berita->judul}}" class="form-control" name="judul">

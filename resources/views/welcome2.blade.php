@@ -92,7 +92,7 @@
                     <h1 class="mb-4">{{$promo->judul}}</h1>
                     <p class="mb-4">{!!Illuminate\Support\Str::limit($promo->content,200)!!}</p>
           
-                    <a href="/berita/{{$promo->slug}}" class="btn btn-primary py-3 px-5">Read More<i class="fa fa-arrow-right ms-3"></i></a>
+                    <a href="/berita/{{$->slug}}" class="btn btn-primary py-3 px-5">Read More<i class="fa fa-arrow-right ms-3"></i></a>
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@
                         </button>
                         <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
                             <i class="fa fa-car fa-2x me-3"></i>
-                            <h4 class="m-0">Promo</h4>
+                            <h4 class="m-0">Media</h4>
                         </button>
                         <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
                             <i class="fa fa-cog fa-2x me-3"></i>

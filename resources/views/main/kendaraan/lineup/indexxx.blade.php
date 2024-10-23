@@ -77,12 +77,6 @@
         display: inline-block;
     }
 
-    .karoseri{
-        max-height: 700px;
-        overflow: hidden;
-    }
-
-
     @media screen and (min-width: 800px) {
         .modal-dialog {
             max-width: 750px;
@@ -90,13 +84,6 @@
     }
 
     @media screen and (max-width: 767px) {
-        .karoseri{
-        max-height: 400px;
-        overflow: hidden;
-    }
-    .feature{
-        max-height: 600px;
-    }
         .footer__menu-custom {
             display: flex;
             flex-wrap: wrap;
@@ -459,7 +446,7 @@
     }
 
     .product-details .other .other__wrapper img {
-        margin-bottom: 0px;
+        margin-bottom: 30px;
     }
 
     .product-details .other .other__wrapper a {
@@ -706,12 +693,12 @@ background-image: url(/wp-content/themes/ktb_fuso/public/assets/2024/img/min.web
                                     <div class="accordion accordion-flush" id="specAccordion">
                                         @foreach ($lineup_spesifikasi as $idx => $item)
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="flush-headingOne{{ $loop->index }}">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{ $loop->index }}" aria-expanded="true" aria-controls="flush-collapseOne{{ $loop->index }}">
+                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
                                                     {{$idx}}
                                                 </button>
                                             </h2>
-                                            <div id="flush-collapseOne{{ $loop->index }}" class="accordion-collapse collapse {{ $loop->index == 0 ? 'show' : '' }}" aria-labelledby="flush-headingOne{{ $loop->index }}" data-bs-parent="#specAccordion">
+                                            <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#specAccordion">
                                                 <div class="accordion-body">
                                                     <div class="table-responsive-sm">
                                                         <table class="table align-middle">

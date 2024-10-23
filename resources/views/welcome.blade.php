@@ -168,7 +168,7 @@
 			<div class="col-lg-9">
 				<div class="section__title">
 					<h2>
-					   kami memiliki dealer yang tersebar di seluruh Indonesia
+						Kami siap melayani Anda dengan sepenuh hati
 					</h2>
 				</div>
 			</div>
