@@ -73,12 +73,18 @@
                     <div id="row_lineup" class="">
                         @forelse ($lineup_slider as $idx => $item)
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-4">
+                                <label for="">Judul</label>
+                                <div class="d-flex align-items-center">
+                                <input value="{{$item->judul}}" type="text" required class="form-control my-0" name="item[{{$idx}}][judul]">
+                                </div>
+                            </div>
+                            <div class="col-4">
                                 <input type="hidden" name="item[{{$idx}}][id]" value="{{$item->id}}">
                                 <label for="">Foto</label>
                                 <input type="file" class="form-control" name="item[{{$idx}}][gambar]">
                             </div>
-                            <div class="col-6">
+                            <div class="col-4">
                                 <label for="">Text</label>
                                 <div class="d-flex align-items-center">
                                 <input value="{{$item->text}}" type="text" required class="form-control my-0" name="item[{{$idx}}][text]">
@@ -88,12 +94,18 @@
                         </div>
                         @empty
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-4">
+                                <label for="">Judul</label>
+                                <div class="d-flex align-items-center">
+                                <input type="text" required class="form-control my-0" name="item[0][judul]">
+                                </div>
+                            </div>
+                            <div class="col-4">
                                 <input type="hidden" name="item[0][id]">
                                 <label for="">Foto</label>
                                 <input type="file" required class="form-control" name="item[0][gambar]">
                             </div>
-                            <div class="col-6">
+                            <div class="col-4">
                                 <label for="">Text</label>
                                 <input type="text" required class="form-control my-0" name="item[0][text]">
                             </div>
@@ -101,6 +113,43 @@
                         @endforelse
                     
                 </div>
+
+
+                <button onclick="addRow3()" class="btn btn-secondary mt-4">+Add row slider</button>
+                    <div id="row_lineup2" class="">
+                        @forelse ($lineup_slider2 as $idx => $item)
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="hidden" name="item2[{{$idx}}][id]" value="{{$item->id}}">
+                                <label for="">Foto</label>
+                                <input type="file" class="form-control" name="item2[{{$idx}}][gambar]">
+                            </div>
+                            <div class="col-6">
+                                <label for="">Text</label>
+                                <div class="d-flex align-items-center">
+                                <input value="{{$item->text}}" type="text" required class="form-control my-0" name="item2[{{$idx}}][text]">
+                                <a href="/lineup_slider/delete/{{$item->id}}" class="btn btn-danger my-0">Del</a>
+                                </div>
+                            </div>
+                        </div>
+                        @empty
+                        <div class="row">
+
+                            <div class="col-6">
+                                <input type="hidden" name="item2[0][id]">
+                                <label for="">Foto</label>
+                                <input type="file" required class="form-control" name="item2[0][gambar]">
+                            </div>
+                            <div class="col-6">
+                                <label for="">Text</label>
+                                <input type="text" required class="form-control my-0" name="item2[0][text]">
+                            </div>
+                        </div>
+                        @endforelse
+                    
+                </div>
+
+
                 <button onclick="addRow2()" class="btn btn-secondary mt-4">+Add row spesifikasi</button>
                 <div id="row_spesifikasi" class="">
                     @forelse ($lineup_spesifikasi as $idx => $item)
@@ -114,7 +163,7 @@
         <option value="BERAT" {{ $item->jenis == 'BERAT' ? 'selected' : '' }}>BERAT</option>
         <option value="KEMAMPUAN" {{ $item->jenis == 'KEMAMPUAN' ? 'selected' : '' }}>KEMAMPUAN</option>
         <option value="MESIN" {{ $item->jenis == 'MESIN' ? 'selected' : '' }}>MESIN</option>
-        <option value="TRANMISI" {{ $item->jenis == 'TRANMISI' ? 'selected' : '' }}>TRANMISI</option>
+        <option value="TRANSMISI" {{ $item->jenis == 'TRANSMISI' ? 'selected' : '' }}>TRANSMISI</option>
         <option value="SETIR" {{ $item->jenis == 'SETIR' ? 'selected' : '' }}>SETIR</option>
         <option value="SUSPENSI" {{ $item->jenis == 'SUSPENSI' ? 'selected' : '' }}>SUSPENSI</option>
         <option value="REM" {{ $item->jenis == 'REM' ? 'selected' : '' }}>REM</option>
@@ -122,6 +171,8 @@
         <option value="SISTEM KELISTRIKAN" {{ $item->jenis == 'SISTEM KELISTRIKAN' ? 'selected' : '' }}>SISTEM KELISTRIKAN</option>
         <option value="KAPASITAS BAHAN BAKAR" {{ $item->jenis == 'KAPASITAS BAHAN BAKAR' ? 'selected' : '' }}>KAPASITAS BAHAN BAKAR</option>
         <option value="KAPASITAS PENGEMUDI" {{ $item->jenis == 'KAPASITAS PENGEMUDI' ? 'selected' : '' }}>KAPASITAS PENGEMUDI</option>
+        <option value="AS" {{ $item->jenis == 'AS' ? 'selected' : '' }}>AS</option>
+        <option value="KABIN" {{ $item->jenis == 'KABIN' ? 'selected' : '' }}>KABIN</option>
                             </select>
                         </div>
                         <div class="col-3">
@@ -151,7 +202,7 @@
                                 <option value="BERAT">BERAT</option>
                                 <option value="KEMAMPUAN">KEMAMPUAN</option>
                                 <option value="MESIN">MESIN</option>
-                                <option value="TRANMISI">TRANMISI</option>
+                                <option value="TRANSMISI">TRANSMISI</option>
                                 <option value="SETIR">SETIR</option>
                                 <option value="SUSPENSI">SUSPENSI</option>
                                 <option value="REM">REM</option>
@@ -159,6 +210,8 @@
                                 <option value="SISTEM KELISTRIKAN">SISTEM KELISTRIKAN</option>
                                 <option value="KAPASITAS BAHAN BAKAR">KAPASITAS BAHAN BAKAR</option>
                                 <option value="KAPASITAS PENGEMUDI">KAPASITAS PENGEMUDI</option>
+                                <option value="AS">AS</option>
+                                <option value="KABIN">KABIN</option>
                             </select>
                         </div>
                         <div class="col-3">
@@ -194,16 +247,45 @@
       document.querySelector('#row_lineup').insertAdjacentHTML('beforeend',
                   `
                   <div class="row">
-                        <div class="col-6">
+                    <div class="col-4">
+                                <label for="">Judul</label>
+                                <div class="d-flex align-items-center">
+                                <input type="text" required class="form-control my-0" name="item[${i}][judul]">
+                                </div>
+                            </div>
+                        <div class="col-4">
                             <input type="hidden" name="item[${i}][id]">
                             <label for="">Foto</label>
                             <input type="file" required class="form-control" name="item[${i}][gambar]">
+                        </div>
+                        <div class="col-4">
+                            <label for="">Text</label>
+
+                            <div class="d-flex gap-2">
+                                <input type="text" required class="form-control my-0" name="item[${i}][text]">
+                                <button onclick="deleteRow(this)" class="btn btn-danger my-0">x</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                  `)
+                  i++
+    }
+
+    function addRow3(){
+      document.querySelector('#row_lineup2').insertAdjacentHTML('beforeend',
+                  `
+                  <div class="row">
+                        <div class="col-6">
+                            <input type="hidden" name="item2[${i}][id]">
+                            <label for="">Foto</label>
+                            <input type="file" required class="form-control" name="item2[${i}][gambar]">
                         </div>
                         <div class="col-6">
                             <label for="">Text</label>
 
                             <div class="d-flex gap-2">
-                                <input type="text" required class="form-control my-0" name="item[${i}][text]">
+                                <input type="text" required class="form-control my-0" name="item2[${i}][text]">
                                 <button onclick="deleteRow(this)" class="btn btn-danger my-0">x</button>
                             </div>
                             
@@ -226,7 +308,7 @@
                                 <option value="BERAT">BERAT</option>
                                 <option value="KEMAMPUAN">KEMAMPUAN</option>
                                 <option value="MESIN">MESIN</option>
-                                <option value="TRANMISI">TRANMISI</option>
+                                <option value="TRANSMISI">TRANSMISI</option>
                                 <option value="SETIR">SETIR</option>
                                 <option value="SUSPENSI">SUSPENSI</option>
                                 <option value="REM">REM</option>
@@ -234,6 +316,8 @@
                                 <option value="SISTEM KELISTRIKAN">SISTEM KELISTRIKAN</option>
                                 <option value="KAPASITAS BAHAN BAKAR">KAPASITAS BAHAN BAKAR</option>
                                 <option value="KAPASITAS PENGEMUDI">KAPASITAS PENGEMUDI</option>
+                                <option value="AS">AS</option>
+                                <option value="KABIN">KABIN</option>
                             </select>
                         </div>
                         <div class="col-3">

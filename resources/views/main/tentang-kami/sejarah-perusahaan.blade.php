@@ -6,7 +6,7 @@
   <div class="container">
       <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/" data-wpel-link="internal">Beranda</a></li><li class="breadcrumb-item"><a href="#!">Tentang KTB</a></li><li class="breadcrumb-item active" aria-current="page">Profil Perusahaan</li>				
+              <li class="breadcrumb-item"><a href="/" data-wpel-link="internal">Beranda</a></li><li class="breadcrumb-item"><a href="#!">Tentang SBM</a></li><li class="breadcrumb-item active" aria-current="page">Profil Perusahaan</li>				
       
           </ol>
       </nav>

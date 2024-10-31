@@ -57,9 +57,22 @@ Fighter X
                         @forelse (getTipeLineup($kendaraan->id) as $idx => $item)
                         <li id="{{$item}}">
                           <div class="variant__icon">
-                              <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-bus.webp" alt="bus">
+                          
+                            @if ($idx == 0)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-bus.webp" alt="bus">
+                            @elseif ($idx == 1)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-capacity.webp" alt="bus">
+                            @elseif ($idx == 2)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-economical.webp" alt="bus">
+                            @elseif ($idx == 3)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-power.webp" alt="bus">
+                            @elseif ($idx == 4)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-speed.webp" alt="bus">
+                      
+                            @endif
+                              
                           </div>
-                          {{$item}}</li>
+                          {{str_replace('Super', '', ($item == 'Super Economial' ? 'Super Economical' : $item))}}</li>
                         @empty
                                 
                         @endforelse
@@ -72,7 +85,7 @@ Fighter X
                         <div class="row variant__row" data-variant="{{$item}}">
                             <div class="variant__name">
                                 <h3>
-                                    {{$item}}                                    </h3>
+                                    {{($item == 'Super Economial' ? 'Super Economical' : $item)}}                                    </h3>
                             </div>
                             @forelse (getLineup($kendaraan->id,$item) as $item2)
                             <div class="col-lg-4 col-6 variant__col">
@@ -113,7 +126,7 @@ Fighter X
                                     <div class="row">
                         <div class="col-md-6 feature__description">
                             <div class="section__title">
-                                <h2>Mesin Canggih</h2>
+                                <h2>Euro 4</h2>
 <p>{{$kendaraan->mesin_canggih ?? ''}}</p>
                             </div>
                         </div>

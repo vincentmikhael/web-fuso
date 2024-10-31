@@ -1001,12 +1001,16 @@
                 Lainnya
             </a>
         </div>
-    
+    <style>
+        .header .navbar-brand:after{
+            width: 0px;
+        }
+    </style>
         <nav class="navbar navbar-expand-lg py-2">
             <div class="container">
                 <a class="navbar-brand" href="/" data-wpel-link="internal">
                     <img src="{{asset(getSetting()->icon)}}" alt="Logo Fuso">
-                    <img src="{{asset(getSetting()->icon2)}}" alt="Logo KTB">
+                    <img style="width: 120px; height: 50px; object-fit: cover;" src="{{asset(getSetting()->icon2)}}" alt="Logo KTB">
                 </a>
     
                 <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -1268,7 +1272,7 @@
                                     </div>
                                     <div class="col-lg-10">
                                         <div class="row filter-img">
-                                            @forelse (getLineup(3,'Super Power') as $item)
+                                            @forelse (getLineup(3,'6x4') as $item)
 
                                             <div class="col-lg-3 filter-img-col">
                                                 <img src="{{asset($item->thumbnail)}}" alt="{{$item->nama}}">
@@ -1315,8 +1319,9 @@
                                     Layanan
                                 </a>
                                 <ul class="dropdown-menu">
+                     
                                     <li>
-                                        <a class="dropdown-item" href="/layanan/purnajual" data-wpel-link="internal">Purnajual</a>
+                                        <a class="dropdown-item" href="/layanan/myfuso" data-wpel-link="internal">myFuso</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="/layanan/service" data-wpel-link="internal">Service</a>
@@ -1347,7 +1352,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="/list-karir">Karir</a>
+                                <a class="nav-link " href="/main-karir">Karir</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navNews" class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
@@ -1359,6 +1364,9 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="/berita?kategori=Fuso Update" data-wpel-link="internal">Fuso Update</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/berita?kategori=Media" data-wpel-link="internal">Media</a>
                                     </li>
     
                                 </ul>
@@ -1434,7 +1442,7 @@
                 <div class="col-md-12 col-lg-5 footer__col">
                     <div class="footer__title footer__logo">
                         <a href="/" data-wpel-link="internal">
-                            <img src="{{getSetting()->icon3}}" alt="Logo KTB">
+                            <img src="{{asset(getSetting()->icon3)}}" alt="Logo KTB">
                         </a>
                     </div>
                     <div class="footer__via address">
@@ -1490,12 +1498,13 @@
                     <ul class="footer__menu-custom">
                         <li>
                             <a href="/tentang-kami/sejarah-perusahaan" data-wpel-link="internal">
-                                Tentang KTB
+                                Tentang SBM
                             </a>
                         </li>
+                
                         <li>
-                            <a href="/layanan/purnajual" data-wpel-link="internal">
-                                Layanan
+                            <a href="/layanan/myfuso" data-wpel-link="internal">
+                                myFuso
                             </a>
                         </li>
                         <li>
@@ -1509,7 +1518,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/list-karir" data-wpel-link="internal">
+                            <a href="/main-karir" data-wpel-link="internal">
                                 Karir
                             </a>
                         </li>

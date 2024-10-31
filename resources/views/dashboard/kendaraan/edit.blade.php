@@ -68,11 +68,11 @@
                     <input type="file" class="form-control" name="foto_fitur_lengkap">
                     </div>
                     <div class="col-md-6">
-                    <label for="">Deskripsi section mesin canggih</label>
+                    <label for="">Deskripsi section euro 4</label>
                     <input type="text" required value="{{$kendaraan->mesin_canggih}}" class="form-control" name="mesin_canggih">
                     </div>
                     <div class="col-md-6">
-                    <label for="">Foto section mesin canggih</label>
+                    <label for="">Foto section euro 4</label>
                     <small style="color: red; font-size 11px;">Foto wajib horizontal / berukuran 846 x 596</small>
                     <input type="file" class="form-control" name="foto_mesin_canggih">
                      </div>

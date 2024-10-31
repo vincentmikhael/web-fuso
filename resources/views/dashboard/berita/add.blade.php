@@ -13,6 +13,7 @@
                     <select class="form-select" name="kategori" id="">
                         <option value="Fuso Update" selected>Fuso Update</option>
                         <option value="Siaran Pers">Siaran Pers</option>
+                        <option value="Media">Media</option>
                     </select>
                     <label for="">Judul</label>
                     <input type="text" class="form-control" name="judul">

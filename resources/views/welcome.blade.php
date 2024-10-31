@@ -2,6 +2,14 @@
 
 
 @section('content')
+<style>
+	.swiperHero{
+		height: fit-content !important;
+	}
+	.swiper-pagination{
+		display: none;
+	}
+</style>
 <main class="homes">
     
         
@@ -168,7 +176,7 @@
 			<div class="col-lg-9">
 				<div class="section__title">
 					<h2>
-					   kami memiliki dealer yang tersebar di seluruh Indonesia
+						Kami siap melayani Anda dengan sepenuh hati
 					</h2>
 				</div>
 			</div>

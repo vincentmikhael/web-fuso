@@ -7,6 +7,7 @@ use App\Models\Banner;
 use App\Models\Kendaraan\Kendaraan;
 use App\Models\Kendaraan\Lineup;
 use App\Models\Kendaraan\LineupSlider;
+use App\Models\Kendaraan\LineupSlider2;
 use App\Models\Kendaraan\LineupSpesifikasi;
 use App\Models\Kendaraan\LineupWarna;
 use Illuminate\Http\Request;
@@ -28,6 +29,7 @@ class LineupController extends Controller
     public function show($slug,$lineup_slug){
         $lineup = Lineup::where('slug',$lineup_slug)->first();
         $lineup_slider = LineupSlider::where('lineup_id',$lineup->id)->get();
+        $lineup_slider2 = LineupSlider2::where('lineup_id',$lineup->id)->get();
         $lineup_spek = LineupSpesifikasi::where('lineup_id',$lineup->id)->get();
         $lineup_spesifikasi = [];
         foreach($lineup_spek as $item){
@@ -37,18 +39,19 @@ class LineupController extends Controller
                 'text3' => $item->text3,
             ];
         }
-        return view('main/kendaraan/lineup/index',compact('lineup','lineup_slider','lineup_spesifikasi'));
+        return view('main/kendaraan/lineup/index',compact('lineup','lineup_slider','lineup_spesifikasi','lineup_slider2'));
     }
 
     public function edit($id_kendaraan,$id_lineup){
         $lineup = Lineup::find($id_lineup);
         $lineup_slider = LineupSlider::where('lineup_id',$id_lineup)->get();
+        $lineup_slider2 = LineupSlider2::where('lineup_id',$id_lineup)->get();
         $lineup_spesifikasi = LineupSpesifikasi::where('lineup_id',$id_lineup)->get();
-        return view('dashboard/kendaraan/lineup/edit',compact('id_kendaraan','lineup','lineup_slider','lineup_spesifikasi'));
+        return view('dashboard/kendaraan/lineup/edit',compact('id_kendaraan','lineup','lineup_slider','lineup_spesifikasi','lineup_slider2'));
     }
 
     public function add_action(Request $request,$id_kendaraan){
-        $insert = $request->except(['_token','thumbnail','gambar','banner','item','spesifikasi']);
+        $insert = $request->except(['_token','thumbnail','gambar','banner','item','spesifikasi','item2']);
         $insert['kendaraan_id'] = $id_kendaraan;
         $insert['created_by'] = Auth::user()->username;
 
@@ -83,10 +86,24 @@ class LineupController extends Controller
             $data[] = [
                 "gambar" => "images/lineup_kendaraan/" . $gambar,
                 "text" => $item['text'],
-                "lineup_id" => $id
+                "lineup_id" => $id,
+                "judul" => $item['judul']
             ];
         }
         LineupSlider::insert($data);
+
+        $data2 = [];
+        foreach($request->item2 as $idx => $item){
+            $gambar = $idx . time() . $item['gambar']->getClientOriginalName();
+            $item['gambar']->move(public_path('images/lineup_kendaraan/'), $gambar);
+
+            $data2[] = [
+                "gambar" => "images/lineup_kendaraan/" . $gambar,
+                "text" => $item['text'],
+                "lineup_id" => $id,
+            ];
+        }
+        LineupSlider2::insert($data2);
 
         $spesifikasi = [];
         foreach($request->spesifikasi as $spek){
@@ -104,7 +121,7 @@ class LineupController extends Controller
     }
 
     public function update(Request $request,$id_kendaraan,$id_lineup){
-        $insert = $request->except(['_token','thumbnail','gambar','banner','item','spesifikasi']);
+        $insert = $request->except(['_token','thumbnail','gambar','banner','item','spesifikasi','item2']);
         $insert['kendaraan_id'] = $id_kendaraan;
         $insert['updated_by'] = Auth::user()->username;
         $lineup = Lineup::find($id_lineup);
@@ -142,11 +159,13 @@ class LineupController extends Controller
                 $data[] = [
                     "gambar" => "images/lineup_kendaraan/" . $gambar,
                     "text" => $item['text'],
-                    "lineup_id" => $id_lineup
+                    "lineup_id" => $id_lineup,
+                    'judul' => $item['judul']
                 ];
             }else{
                 $updated = [
-                    "text" => $item['text']
+                    "text" => $item['text'],
+                    'judul' => $item['judul']
                 ];
                 if(isset($item['gambar'])){
                     $slider = LineupSlider::find($item['id']);
@@ -164,8 +183,40 @@ class LineupController extends Controller
         if(count($data) > 0){
             LineupSlider::insert($data);
         }
+
+        $data2 = [];
+        foreach($request->item2 as $idx => $item){
+            if(!$item['id']){
+                $gambar = $idx . time() . $item['gambar']->getClientOriginalName();
+                $item['gambar']->move(public_path('images/lineup_kendaraan/'), $gambar);
+    
+                $data2[] = [
+                    "gambar" => "images/lineup_kendaraan/" . $gambar,
+                    "text" => $item['text'],
+                    "lineup_id" => $id_lineup,
+                ];
+            }else{
+                $updated = [
+                    "text" => $item['text'],
+                ];
+                if(isset($item['gambar'])){
+                    $slider = LineupSlider::find($item['id']);
+                    $gambar = $idx . time() . $item['gambar']->getClientOriginalName();
+                    $item['gambar']->move(public_path('images/lineup_kendaraan/'), $gambar);
+                    $updated['gambar'] = 'images/lineup_kendaraan/' . $gambar;
+                }
+                
+                LineupSlider::where('id',$item['id'])->update($updated);
+            }
+            
+        }
+
+        if(count($data2) > 0){
+            LineupSlider2::insert($data2);
+        }
         
         $spesifikasi_data = [];
+        // dd($request->spesifikasi);
         foreach($request->spesifikasi as $spek){
             if(!$spek['id']){
                 $spesifikasi_data[] = [
@@ -182,7 +233,7 @@ class LineupController extends Controller
                     'text2' => $spek['text2'],
                     'text3' => $spek['text3'],
                 ];
-                LineupSpesifikasi::where('id',$item['id'])->update($update);
+                LineupSpesifikasi::where('id',$spek['id'])->update($update);
             }
             
         }
@@ -203,7 +254,7 @@ class LineupController extends Controller
 
         $lineupWarna = LineupSlider::where('lineup_id',$lineup_id)->get();
         foreach($lineupWarna as $item){
-            File::delete(public_path($item->gambar));
+    
             LineupSlider::destroy($item->id);
         }
         LineupSpesifikasi::where('lineup_id',$lineup_id)->delete();
@@ -218,8 +269,7 @@ class LineupController extends Controller
 
     public function delete_slider($id){
         $lineup = LineupSlider::find($id);
-        File::delete(public_path($lineup->gambar));
-        LineupSlider::destroy($id);
+        LineupSlider2::destroy($id);
         return redirect()->back()->with('success','Data berhasil dihapus');
     }
 }

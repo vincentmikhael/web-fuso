@@ -53,11 +53,11 @@
                     <input type="file" required class="form-control" name="foto_fitur_lengkap">
                     </div>
                     <div class="col-md-6">
-                    <label for="">Deskripsi section mesin canggih</label>
+                    <label for="">Deskripsi section euro 4</label>
                     <input type="text" required class="form-control" name="mesin_canggih">
                     </div>
                     <div class="col-md-6">
-                    <label for="">Foto section mesin canggih</label>
+                    <label for="">Foto section euro 4</label>
                     <input type="file" required class="form-control" name="foto_mesin_canggih">
                      </div>
                     <div class="col-md-6">

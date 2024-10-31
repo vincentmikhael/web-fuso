@@ -98,6 +98,8 @@ class BeritaController extends Controller
             $berita->where('kategori','Siaran Pers');
         }else if($request->get('kategori') == 'Fuso Update'){
             $berita->where('kategori','Fuso Update');
+        }else if($request->get('kategori') == 'Promo'){
+            $berita->where('kategori','Promo');
         }
         
         if($request->get('search')){

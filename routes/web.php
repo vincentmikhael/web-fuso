@@ -36,7 +36,15 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/layanan/myfuso',function(){
+    return view('main/aftersales/myfuso');
+});
+Route::get('/contact-us',function(){
+    return view('main/contact-us');
+});
+Route::get('/main-karir',function(){
+    return view('main/karir/main');
+});
 Route::get('/', [MainController::class,'index']);
 Route::get('/service/telematics',function(){
     return view('main.aftersales.telematics');

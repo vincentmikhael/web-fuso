@@ -10,9 +10,9 @@
                 <div class="col-md-9">
                     <h2 class="mb-4 mb-md-0">Daftar Genuine Sparepart Truk Mitsubishi Fuso</h2>
                 </div>
-                {{-- <div class="col-md-3 text-md-end">
-                    <a class="btn btn__primary" href="https://www.ktbfuso.co.id/contact-us" data-wpel-link="internal">Hubungi Kami</a>
-                </div> --}}
+                <div class="col-md-3 text-md-end">
+                    <a class="btn btn__primary" href="/contact-us" data-wpel-link="internal">Hubungi Kami</a>
+                </div>
             </div>
             <ul class="rm-gallery__cat">
                 <li><a class="btn btn__sort" href="/layanan/sparepart/#gallery" data-wpel-link="internal">Semua</a></li>
