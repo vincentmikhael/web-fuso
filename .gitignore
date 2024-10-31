@@ -4,6 +4,7 @@
 /public/hot
 /public/storage
 /public/wp-content
+/public/images
 /storage/*.key
 /vendor
 .env
