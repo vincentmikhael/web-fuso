@@ -21,7 +21,7 @@
                         MyFUSO
                     </h1>
                     <p>
-                        Aplikasi digital KTB yang ditujukan untuk pelanggan truk Fuso yang untuk membantu dan mempermudah dalam mendapatkan informasi produk, layanan, serta program-program lainnya.
+                        Aplikasi digital SBM yang ditujukan untuk pelanggan truk Fuso yang untuk membantu dan mempermudah dalam mendapatkan informasi produk, layanan, serta program-program lainnya.
                     </p>
                 </div>
                 <div class="telematic__link download__myfuso">
@@ -122,7 +122,7 @@
                 <div class="section__title row justify-content-center mb-5">
                     <div class="col-lg-6 text-center">
                         <h2>Fitur MyFUSO</h2>
-                        <p>MyFUSO dilengkapi dengan berbagai fitur yang lengkap untuk memberikan kemudahan pagi pelanggan KTB</p>
+                        <p>MyFUSO dilengkapi dengan berbagai fitur yang lengkap untuk memberikan kemudahan pagi pelanggan SBM</p>
                     </div>
                 </div>
                 
@@ -371,7 +371,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="code__modal--body">
-                                            <p><span style="font-weight: 400;">Dalam rangka memenuhi peraturan Indonesia yaitu Peraturan Menteri Perhubungan No.33/2018 Tentang Pengujian Tipe Kendaraan Bermotor, dan Peraturan Menteri Perhubungan No.53/2019 tentang Tata Cara Penarikan Kembali Kendaraan Bermotor, PT Krama Yudha Tiga Berlian Motors (“PT KTB”) sebagai distributor resmi Mitsubishi Fuso Truck and Bus Corporation di Indonesia memberikan informasi di website KTB dengan penjelasan sebagai berikut.</span></p>
+                                            <p><span style="font-weight: 400;">Dalam rangka memenuhi peraturan Indonesia yaitu Peraturan Menteri Perhubungan No.33/2018 Tentang Pengujian Tipe Kendaraan Bermotor, dan Peraturan Menteri Perhubungan No.53/2019 tentang Tata Cara Penarikan Kembali Kendaraan Bermotor, PT Krama Yudha Tiga Berlian Motors (“PT SBM”) sebagai distributor resmi Mitsubishi Fuso Truck and Bus Corporation di Indonesia memberikan informasi di website SBM dengan penjelasan sebagai berikut.</span></p>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
@@ -402,7 +402,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="code__modal--body">
-                                            <p>Layanan purna jual yang pertama di Indonesia di bawah standarisasi PT. KTB yang menyediakan layanan perbaikan chassis, perbaikan kabin, penggantian suku cadang resmi, dan pengecatan ulang dimana semua fasilitas ini sesuai dengan standard Mitsubishi Fuso di Indonesia</p>
+                                            <p>Layanan purna jual yang pertama di Indonesia di bawah standarisasi PT. SBM yang menyediakan layanan perbaikan chassis, perbaikan kabin, penggantian suku cadang resmi, dan pengecatan ulang dimana semua fasilitas ini sesuai dengan standard Mitsubishi Fuso di Indonesia</p>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
@@ -434,7 +434,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="code__modal--body">
-                                            <p>Layanan purna jual yang pertama di Indonesia di bawah standarisasi PT. KTB yang menyediakan layanan perbaikan chassis, perbaikan kabin, penggantian suku cadang resmi, dan pengecatan ulang dimana semua fasilitas ini sesuai dengan standard Mitsubishi Fuso di Indonesia</p>
+                                            <p>Layanan purna jual yang pertama di Indonesia di bawah standarisasi PT. SBM yang menyediakan layanan perbaikan chassis, perbaikan kabin, penggantian suku cadang resmi, dan pengecatan ulang dimana semua fasilitas ini sesuai dengan standard Mitsubishi Fuso di Indonesia</p>
                                         </div>
                                     </div>
                                     <div class="modal-footer">

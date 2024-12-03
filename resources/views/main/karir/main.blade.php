@@ -115,7 +115,7 @@
                             <div class="col-lg-6 ">
                                 <div class="section__title">
                                     <p>
-                                        Lingkungan kerja perusahaan menjunjung tinggi Prinsip serta Semangat KTB. Anda akan bertemu dengan para profesional di bidangnya, terdiri dari pekerja lokal dan ekspatriat sehingga keberagaman memunculkan inovasi serta ide baru untuk kemajuan perusahaan
+                                        Lingkungan kerja perusahaan menjunjung tinggi Prinsip serta Semangat SBM. Anda akan bertemu dengan para profesional di bidangnya, terdiri dari pekerja lokal dan ekspatriat sehingga keberagaman memunculkan inovasi serta ide baru untuk kemajuan perusahaan
                                     </p>
                                 </div>
                             </div>
@@ -202,10 +202,10 @@
                         <div class="col-lg-9">
                             <div class="section__title">
                                 <h2>
-                                    Temukan Peluang Anda bersama KTB
+                                    Temukan Peluang Anda bersama SBM
                                 </h2>
                                 <p>
-                                    Temukan Peluang dan Mulai rencanakan pengembangan karir Anda bersama KTB
+                                    Temukan Peluang dan Mulai rencanakan pengembangan karir Anda bersama SBM
                                 </p>
                             </div>
                         </div>
@@ -223,7 +223,7 @@
                             Peringatan
                         </h3>
                         <p>
-                            Hati-hati pada informasi lamaran kerja palsu/ oknum mengatasnamakan KTB yang menjanjikan pekerjaan dengan memungut biaya tertentu kepada calon pelamar kerja. KTB tidak pernah memungut biaya apapun kepada calon pelamar kerja selama proses rekrutmen.
+                            Hati-hati pada informasi lamaran kerja palsu/ oknum mengatasnamakan SBM yang menjanjikan pekerjaan dengan memungut biaya tertentu kepada calon pelamar kerja. SBM tidak pernah memungut biaya apapun kepada calon pelamar kerja selama proses rekrutmen.
                         </p>
                     </div>
                 </div>
