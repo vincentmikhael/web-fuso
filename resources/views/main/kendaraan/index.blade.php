@@ -55,9 +55,10 @@ Fighter X
                     <ul>
                         <li class="current" id="all">All</li>
                         @forelse (getTipeLineup($kendaraan->id) as $idx => $item)
+                        
                         <li id="{{$item}}">
                           <div class="variant__icon">
-                          
+                            @if($kendaraan->nama == "LIGHT DUTY")
                             @if ($idx == 0)
                             <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-bus.webp" alt="bus">
                             @elseif ($idx == 1)
@@ -68,7 +69,35 @@ Fighter X
                             <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-power.webp" alt="bus">
                             @elseif ($idx == 4)
                             <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-speed.webp" alt="bus">
-                      
+                            @endif
+                            @endif
+
+                            @if($kendaraan->nama == "MEDIUM DUTY")
+                            @if ($idx == 0)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-4x2-1.webp" alt="bus">
+                            @elseif ($idx == 1)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-6x2-1.webp" alt="bus">
+                            @elseif ($idx == 2)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-6x4-1.webp" alt="bus">
+                            @elseif ($idx == 3)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-power.webp" alt="bus">
+                            @elseif ($idx == 4)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-speed.webp" alt="bus">
+                            @endif
+                            @endif
+
+                            @if($kendaraan->nama == "TRACTOR HEAD")
+                            @if ($idx == 0)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-6x4a.webp" alt="bus">
+                            @elseif ($idx == 1)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-6x2-1.webp" alt="bus">
+                            @elseif ($idx == 2)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-6x4-1.webp" alt="bus">
+                            @elseif ($idx == 3)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-power.webp" alt="bus">
+                            @elseif ($idx == 4)
+                            <img src="https://www.ktbfuso.co.id/wp-content/uploads/2023/02/logo-speed.webp" alt="bus">
+                            @endif
                             @endif
                               
                           </div>
